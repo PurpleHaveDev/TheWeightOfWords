@@ -4,17 +4,65 @@
 
 label start:
 
-    C "Wähle eine Sprache"
     menu:
-        "Deutsch":
+        "Start":
+            jump Game_Start
             pass
-        "English":
-            $English=True
+        "Sprache":
+            "Wähle eine Sprache"
+            menu:
+                "Deutsch":
+                    $English=False
+                    jump start
+                "English":
+                    $English=True
+                    jump start
 
-if English==False:
-    C "Das ist auf Deutsch."
+        "Credits":
+            if English==False:
+                "Projektleitung: Vora Narga"
+                "Idee: Aron Agrav"
+                "Autorin: Das Nörchen"
+                "2D Graphiken: Miriam Löffel"
+                "Programmierung: Philipp Lüer"
+                jump start
+            else:
+                "Project Lead: Vora Narga"
+                "Idea: Aron Agrav"
+                "Lead Writing: Das Nörchen"
+                "2D Asstes: Miriam Löffel"
+                "Programming: Flip Tür"
+                jump start
 
-else:
-    C "This is in English."
+        "Lautstärke":
+            label .VolumeSttings:
+                if English==False:
+                    menu:
+                        "Lauter":
+                            $Lautstärke=Lautstärke++0.05
+                            return
+                        "Leiser":
+                            $Lautstärke=Lautstärke--0.05
+                            return
+                        "Zurück":
+                            jump .VolumeSttings
+                else:
+                    menu:
+                        "Louder":
+                            $Lautstärke=Lautstärke++0.05
+                            return
+                        "Quieter":
+                            $Lautstärke=Lautstärke--0.05
+                            return
+                        "Back":
+                            jump .VolumeSttings
+
+
+label Game_Start:
+    if English==False:
+        C "Das ist auf Deutsch."
+
+    else:
+        C "This is in English."
 
 return
