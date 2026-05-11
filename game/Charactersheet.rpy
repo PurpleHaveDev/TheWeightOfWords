@@ -1,0 +1,1 @@
+define C = Character("[Character_1]", color="8030FF")
