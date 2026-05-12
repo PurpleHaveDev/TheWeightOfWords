@@ -55,9 +55,9 @@ label Szenario1:
             "[Rede1_Zukunft4]":
                 AU "*reaktion*"
 
-    NA "Sieh nun die Auswirkungen deiner Rede auf die Sachlage."
-    NW "Platzhalter Text"
-    NW "Platzhalter Text"
+        NA "Sieh nun die Auswirkungen deiner Rede auf die Sachlage."
+        NW "Platzhalter Text"
+        NW "Platzhalter Text"
 
     else:
         NW "Sample Text"                                                                                                     #Hier ist das setup des szenarios in Form eines Zeitzungsartikels

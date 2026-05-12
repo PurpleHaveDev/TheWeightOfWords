@@ -10,9 +10,9 @@ default Character_3="Audience"
 default Lautstärke = 0.5
 default Szenario = 1
 
-define config.default_music_volume = [Lautstärke]
-define config.default_sfx_volume = [Lautstärke]
-define config.default_voice_volume = [Lautstärke]
+#define config.default_music_volume = [Lautstärke]
+#define config.default_sfx_volume = [Lautstärke]
+#define config.default_voice_volume = [Lautstärke]
 
 
 

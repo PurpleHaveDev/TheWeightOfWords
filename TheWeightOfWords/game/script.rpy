@@ -8,7 +8,7 @@ label start:
     if English==False:                                          #Das Deutsche Menu 
         menu:
             "Start":
-                pass
+                jump Game_Start
 
             "Sprache":
                 "Wähle eine Sprache"
@@ -38,78 +38,85 @@ label start:
                     "Localization: Nora Varga & Philipp Lüer"
                     jump start
 
-            "Lautstärke":                                        #Lautstärke wird prozentual gerechnet, deswegen "0.0~" 
+            "Lautstärke":
+                label LautstärkeDE:                              #Lautstärke wird prozentual gerechnet, deswegen "0.0~" 
                     if English==False:
-                        menu:
-                            "Lauter":
-                                $Lautstärke=Lautstärke++0.05
-                                return                          #Muss noch nen Weg finden, dass man hier nur ein menu zurück geschickt wird/in ndem Menu bleibt
-                            "Leiser":
-                                $Lautstärke=Lautstärke--0.05
-                                return
-                            "Zurück":
-                                pass
+                            menu:
+                                "Lauter":
+                                    $Lautstärke=Lautstärke++0.05
+                                    jump LautstärkeDE
+                                "Leiser":
+                                    $Lautstärke=Lautstärke--0.05
+                                    jump LautstärkeDE
+                                "Zurück":
+                                    jump start                      #Muss noch nen Weg finden, dass man hier nur ein menu zurück geschickt wird/in ndem Menu bleibt
+                        
                     else:
-                        menu:
-                            "Louder":
-                                $Lautstärke=Lautstärke++0.05
-                                return
-                            "Quieter":
-                                $Lautstärke=Lautstärke--0.05
-                                return
-                            "Back":
-                                pass
-    else:                                                       #Das Englische Menu
-        "Start":
-            pass
+                            menu:
+                                "Louder":
+                                    $Lautstärke=Lautstärke++0.05
+                                    jump LautstärkeDE
+                                "Quieter":
+                                    $Lautstärke=Lautstärke--0.05
+                                    jump LautstärkeDE
+                                "Back":
+                                    jump start
+    else: 
+        menu:                                                      #Das Englische Menu
+            "Start":
+                jump Game_Start
 
-        "Language":
-            "Choose a Language"
-            menu:
-                "German":
-                    $English=False
-                    jump start
-                "English":
-                    $English=True
-                    jump start
+            "Language":
+                "Choose a Language"
+                menu:
+                    "German":
+                        $English=False
+                        jump start
+                    "English":
+                        $English=True
+                        jump start
             "Credits":
                 if English==False:
-                    "Projektleitung: Vora Narga"
-                    "Idee: Aron Agrav"
-                    "Autorin: Das Nörchen"
-                    "2D Graphiken: Miriam Löffel"
+                    "Projektleitung: Nora varga"
+                    "Idee: Nora Varga"
+                    "Autorin: Nora Varga"
+                    "2D Graphiken: Miriam Löffler"
                     "Programmierung: Philipp Lüer"
+                    "Übersetzung: Nora Varga & Philipp Lüer"
                     jump start
                 else:
-                    "Project Lead: Vora Narga"
-                    "Idea: Aron Agrav"
-                    "Lead Writing: Das Nörchen"
-                    "2D Asstes: Miriam Löffel"
-                    "Programming: Flip Tür"
+                    "Project Lead: Nora Varga"
+                    "Idea: Nora Varga"
+                    "Lead Writing: Nora Varga"
+                    "2D Asstes: Miriam Löffler"
+                    "Programming: Philipp Lüer"
+                    "Localization: Nora Varga & Philipp Lüer"
                     jump start
 
-            "Lautstärke":
-                    if English==False:
-                        menu:
-                            "Lauter":
-                                $Lautstärke=Lautstärke++0.05
-                                return
-                            "Leiser":
-                                $Lautstärke=Lautstärke--0.05
-                                return
-                            "Zurück":
-                                pass
-                    else:
-                        menu:
-                            "Louder":
-                                $Lautstärke=Lautstärke++0.05
-                                return
-                            "Quieter":
-                                $Lautstärke=Lautstärke--0.05
-                                return
-                            "Back":
-                                pass
 
+            "Volume":
+                label LautstärkeEN:                                        #Lautstärke wird prozentual gerechnet, deswegen "0.0~" 
+                    if English==False:
+                            menu:
+                                "Lauter":
+                                    $Lautstärke=Lautstärke++0.05      
+                                    jump LautstärkeEN                                                       
+                                "Leiser":
+                                    $Lautstärke=Lautstärke--0.05    
+                                    jump LautstärkeEN                      
+                                "Zurück":
+                                    jump start                      #Muss noch nen Weg finden, dass man hier nur ein menu zurück geschickt wird/in ndem Menu bleibt
+                                
+                    else:
+                            menu:
+                                "Louder":
+                                    $Lautstärke=Lautstärke++0.05
+                                    jump LautstärkeEN
+                                "Quieter":
+                                    $Lautstärke=Lautstärke--0.05
+                                    jump LautstärkeEN
+                                "Back":
+                                    jump start
 
 label Game_Start:
     if English==False:
