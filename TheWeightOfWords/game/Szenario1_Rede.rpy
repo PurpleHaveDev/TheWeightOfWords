@@ -13,7 +13,11 @@ label Szenario1:
             "[Rede1_Einleitung3]":
                 AU "*reaktion*"
             "[Rede1_Einleitung4]":
-                AU "*reaktion*"
+                AU "*reaktion*"                                     # Als nächstes muss unbedingt ein Variablen Array erstellt werden, das trackt, welche Option gewählt wurde. 
+                                                                    # Fragen zu Klären: Wie viele Varianten von Auswirkungen -"Enden"- soll es geben?
+                                                                    # Wie soll die immediate Reaktion der audience aussehen?
+                                                                    # Wie soll dir finale form der Auswirkungen aussehen? png's, animationen, Text?
+                                                                    # Wie können wir den Punkt Hass und Manipulation noch härter heimhämern?                                                                
 
         menu:
             "[Rede1_Thema1]":
