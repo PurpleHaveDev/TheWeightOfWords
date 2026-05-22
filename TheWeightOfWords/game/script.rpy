@@ -2,7 +2,9 @@
 #this is the main file for this game. Any Setup for Characters or Variables pls do in seperate sheets found in rnpy folder.
 #Please keep this as organized as possible
 
+    
 label start:
+
 
 
     if English==False:                                          #Das Deutsche Menu 
@@ -119,6 +121,7 @@ label start:
                                     jump start
 
 label Game_Start:
+
     if English==False:
         NA "Das ist auf Deutsch."
         menu:

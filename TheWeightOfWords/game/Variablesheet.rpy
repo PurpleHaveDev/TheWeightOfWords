@@ -3,19 +3,31 @@ default Integer = 50
 default Boolean = True
 default Float = 0.5
 
+default B_width = "Box_option_width"
+default B_height = "Box_option_height"
+
+default B_png_width = "Box_option_image_width"
+default B_png_heigt = "Box_option_image_height"
+
 default English = False
 default Character_1="Narrator"
 default Character_2="NEWSPAPER"
 default Character_3="Audience"
 default Lautstärke = 0.5
-default Szenario = 1
+default Szenario = 1 
 
 #define config.default_music_volume = [Lautstärke]
 #define config.default_sfx_volume = [Lautstärke]
 #define config.default_voice_volume = [Lautstärke]
 
-default Agression = 0
-
+default Aggression = 0
+default Decision_1 = [0,0,0,0]
+default Decision_2 = [0,0,0,0]
+default Decision_3 = [0,0,0,0]
+default Decision_4 = [0,0,0,0]
+default Decision_5 = [0,0,0,0]
+default Decision_6 = [0,0,0,0]
+default which_decision = 1
 
 #////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #Die Textblöcke für die verschiendenen Reden. Modular, dass man die Strings und Längen verändern kann
