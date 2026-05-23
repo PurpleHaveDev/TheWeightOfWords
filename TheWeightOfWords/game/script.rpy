@@ -24,20 +24,10 @@ label start:
 
             "Entwickler":
                 if English==False:
-                    "Projektleitung: Nora varga"
-                    "Idee: Nora Varga"
-                    "Autorin: Nora Varga"
-                    "2D Graphiken: Miriam Löffler"
-                    "Programmierung: Philipp Lüer"
-                    "Übersetzung: Nora Varga & Philipp Lüer"
+                    "Kühle Menschen haben an diesem Spiel gearbeitet."
                     jump start
                 else:
-                    "Project Lead: Nora Varga"
-                    "Idea: Nora Varga"
-                    "Lead Writing: Nora Varga"
-                    "2D Asstes: Miriam Löffler"
-                    "Programming: Philipp Lüer"
-                    "Localization: Nora Varga & Philipp Lüer"
+                    "Cool people have worked on this game."
                     jump start
 
             "Lautstärke":
@@ -45,10 +35,10 @@ label start:
                     if English==False:
                             menu:
                                 "Lauter":
-                                    $Lautstärke=Lautstärke++0.05
+                                    $Lautstärke=Lautstärke+0.05
                                     jump LautstärkeDE
                                 "Leiser":
-                                    $Lautstärke=Lautstärke--0.05
+                                    $Lautstärke=Lautstärke-0.05
                                     jump LautstärkeDE
                                 "Zurück":
                                     jump start                      #Muss noch nen Weg finden, dass man hier nur ein menu zurück geschickt wird/in ndem Menu bleibt
@@ -56,10 +46,10 @@ label start:
                     else:
                             menu:
                                 "Louder":
-                                    $Lautstärke=Lautstärke++0.05
+                                    $Lautstärke=Lautstärke+0.05
                                     jump LautstärkeDE
                                 "Quieter":
-                                    $Lautstärke=Lautstärke--0.05
+                                    $Lautstärke=Lautstärke-0.05
                                     jump LautstärkeDE
                                 "Back":
                                     jump start
@@ -79,20 +69,10 @@ label start:
                         jump start
             "Credits":
                 if English==False:
-                    "Projektleitung: Nora varga"
-                    "Idee: Nora Varga"
-                    "Autorin: Nora Varga"
-                    "2D Graphiken: Miriam Löffler"
-                    "Programmierung: Philipp Lüer"
-                    "Übersetzung: Nora Varga & Philipp Lüer"
+                    "Kühle Menschen haben an diesem Spiel gearbeitet."
                     jump start
                 else:
-                    "Project Lead: Nora Varga"
-                    "Idea: Nora Varga"
-                    "Lead Writing: Nora Varga"
-                    "2D Asstes: Miriam Löffler"
-                    "Programming: Philipp Lüer"
-                    "Localization: Nora Varga & Philipp Lüer"
+                    "Cool people have worked on this game."
                     jump start
 
 

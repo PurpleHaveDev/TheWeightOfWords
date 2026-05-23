@@ -21,12 +21,7 @@ default Szenario = 1
 #define config.default_voice_volume = [Lautstärke]
 
 default Aggression = 0
-default Decision_1 = [0,0,0,0]
-default Decision_2 = [0,0,0,0]
-default Decision_3 = [0,0,0,0]
-default Decision_4 = [0,0,0,0]
-default Decision_5 = [0,0,0,0]
-default Decision_6 = [0,0,0,0]
+default Decisions = [0,0,0,0,0,0]
 default which_decision = 1
 
 #////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
