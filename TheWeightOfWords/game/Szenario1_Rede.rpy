@@ -7,7 +7,7 @@ if English==False:
         NA "Du musst jetzt eine Rede halten."                                                                   #Anleitung zum kommenden Gameplay
         NA "Wähle Bausteine der Rede aus um deine Zuhörer in eine bestimmte Richtung zu lenken."
 
-    label decision:
+    label Decision:
         $Box_option_height = 600
         $Box_option_width = 600
         $Box_option_image_width = 500
@@ -19,16 +19,20 @@ if English==False:
     label Decision_stage_1:
         $which_decision = which_decision+1
         $Function(renpy.notify, "Das klappt")
-        jump decision
+        jump Decision
 
     label Decision_stage_2:
         $which_decision = which_decision+1
-        jump decision
+        jump Decision
     
     label Decision_stage_3:
         $which_decision = which_decision+1
-        jump decision
-                                                                # Als nächstes muss unbedingt ein Variablen Array erstellt werden, das trackt, welche Option gewählt wurde. 
+        jump Decision
+
+    label Decision_stage_4:
+        $which_decision = which_decision+1
+        jump Decision
+                                                                    # Als nächstes muss unbedingt ein Variablen Array erstellt werden, das trackt, welche Option gewählt wurde. 
                                                                     # Fragen zu Klären: Wie viele Varianten von Auswirkungen -"Enden"- soll es geben?
                                                                     # Wie soll die immediate Reaktion der audience aussehen?
                                                                     # Wie soll dir finale form der Auswirkungen aussehen? png's, animationen, Text?

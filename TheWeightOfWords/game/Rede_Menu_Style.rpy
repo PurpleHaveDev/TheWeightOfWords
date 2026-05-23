@@ -11,31 +11,31 @@ screen Rede_Menu_Style:
         xpos 800
         ypos 10
         vbox:
-            text"[Decision_1]"
-            text"[Decision_2]"
-            text"[Decision_3]"
-            text"[Decision_4]"
-            text"[Decision_5]"
-            text"[Decision_6]"
-            
+            text"[Decisions]"
+
+    frame:
+        xpos 600
+        ypos 10
+        vbox:
+            text"[Aggression]"
 
 
     button:
+        xpos 200
+        ypos 100
         frame:
-            xpadding 15               #fügt nen coushion rahmen um den text
-            ypadding 15               #ACHTUNG: Das affected nur den Text, nicht den rahmen selbst. Anstatt den rahmen größer zu machen, skaliert es den Text nach innen
+            xpadding 15                                                                               #fügt nen coushion rahmen um den text
+            ypadding 15                                                                               #ACHTUNG: Das affected nur den Text, nicht den rahmen selbst. Anstatt den rahmen größer zu machen, skaliert es den Text nach innen
             #add Solid ("#b1a688")
             add "UI/paper.png":
                 xsize Box_option_image_width
                 ysize Box_option_image_height
                 xalign 0.5
                 yalign 0.5
-            xpos 200
-            ypos 100
             xsize Box_option_width
             ysize Box_option_height                                                  
-            vbox:                                            # vbox and hbox for vertical and horizontally aligned text respectively                                                
-                xalign 0.5                                   # use (grid "width" "height":) for combined hbox and vbox aka. a Grid
+            vbox:                                                                                    # vbox and hbox for vertical and horizontally aligned text respectively                                                
+                xalign 0.5                                                                              # use (grid "width" "height":) for combined hbox and vbox aka. a Grid
                 yalign 0.5
                 if which_decision==1:
                     text "[Rede1_Einstieg1]"
@@ -50,28 +50,120 @@ screen Rede_Menu_Style:
                 else:
                     text "[Rede1_Aufruf1]"
         action[
-            Function(renpy.notify, "Das klappt"),
-            if which_decision==1:
-                SetVariable("Decision_1",1)
-            elif which_decision==2:
-                SetVariable("Decision_2",1)
-            elif which_decision==3:
-                SetVariable("Decision_3",1)
-            elif which_decision==4:
-                SetVariable("Decision_4",1)
-            elif which_decision==5:
-                SetVariable("Decision_5",1)
-            else:
-                SetVariable("Decision_6",1)
+            #Function(renpy.notify, "Das klappt"),
+            Function(Decisions.__setitem__,which_decision - 1, 1),
+            SetVariable("Aggression", Aggression+1),
+ 
+            Jump("Decision_stage_1")
+        ]
+        
 
+    button:
+        xpos 800
+        ypos 100
+        frame:
+            xpadding 15               
+            ypadding 15               
+            #add Solid ("#b1a688")
+            add "UI/paper.png":
+                xsize Box_option_image_width
+                ysize Box_option_image_height
+                xalign 0.5
+                yalign 0.5
+            xsize Box_option_width
+            ysize Box_option_height                                                  
+            vbox:                                                                                  
+                xalign 0.5                                   
+                yalign 0.5
+                if which_decision==1:
+                    text "[Rede1_Einstieg2]"
+                elif which_decision==2:
+                    text "[Rede1_Reaktion2]"
+                elif which_decision==3:
+                    text "[Rede1_Hinführung2]"
+                elif which_decision==4:
+                    text "[Rede1_Problem2]"
+                elif which_decision==5:
+                    text "[Rede1_Erkenntnis2]"
+                else:
+                    text "[Rede1_Aufruf2]"
+        action[
+            Function(renpy.notify, "Das klappt"),
+            Function(Decisions.__setitem__,which_decision - 1, 2),
+            SetVariable("Aggression", Aggression+2),
             Jump("Decision_stage_1")
         ]
 
+    button:
+        xpos 200
+        ypos 700
+        frame:
+            xpadding 15               
+            ypadding 15               
+            #add Solid ("#b1a688")
+            add "UI/paper.png":
+                xsize Box_option_image_width
+                ysize Box_option_image_height
+                xalign 0.5
+                yalign 0.5
+            xsize Box_option_width
+            ysize Box_option_height                                                  
+            vbox:                                           
+                xalign 0.5                                   
+                yalign 0.5
+                if which_decision==1:
+                    text "[Rede1_Einstieg3]"
+                elif which_decision==2:
+                    text "[Rede1_Reaktion3]"
+                elif which_decision==3:
+                    text "[Rede1_Hinführung3]"
+                elif which_decision==4:
+                    text "[Rede1_Problem3]"
+                elif which_decision==5:
+                    text "[Rede1_Erkenntnis3]"
+                else:
+                    text "[Rede1_Aufruf3]"
+        action[
+            Function(renpy.notify, "Das klappt"),
+            Function(Decisions.__setitem__,which_decision - 1, 3),
+            SetVariable("Aggression", Aggression-1),
+            Jump("Decision_stage_1")
+        ]
 
-
-        
-
-        
+    button:
+        xpos 800
+        ypos 700
+        frame:
+            xpadding 15                                                                 
+            ypadding 15                                                                 
+            add "UI/paper.png":
+                xsize Box_option_image_width
+                ysize Box_option_image_height
+                xalign 0.5
+                yalign 0.5
+            xsize Box_option_width
+            ysize Box_option_height                                                  
+            vbox:                                                                                                                         
+                xalign 0.5                                                                  
+                yalign 0.5
+                if which_decision==1:
+                    text "[Rede1_Einstieg4]"
+                elif which_decision==2:
+                    text "[Rede1_Reaktion4]"
+                elif which_decision==3:
+                    text "[Rede1_Hinführung4]"
+                elif which_decision==4:
+                    text "[Rede1_Problem4]"
+                elif which_decision==5:
+                    text "[Rede1_Erkenntnis4]"
+                else:
+                    text "[Rede1_Aufruf4]"
+        action[
+            Function(renpy.notify, "Das klappt"),
+            Function(Decisions.__setitem__,which_decision - 1, 4),
+            SetVariable("Aggression", Aggression-2),
+            Jump("Decision_stage_1")
+        ]
 
 
 

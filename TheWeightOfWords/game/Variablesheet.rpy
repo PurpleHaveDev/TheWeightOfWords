@@ -27,35 +27,35 @@ default which_decision = 1
 #////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #Die Textblöcke für die verschiendenen Reden. Modular, dass man die Strings und Längen verändern kann
 #Szenario1
-default Rede1_Einstieg1 = "OptionA"
-default Rede1_Einstieg2 = "OptionB"
-default Rede1_Einstieg3 = "OptionC"
-default Rede1_Einstieg4 = "OptionD"
+default Rede1_Einstieg1 = "OptionA1"
+default Rede1_Einstieg2 = "OptionB1"
+default Rede1_Einstieg3 = "OptionC1"
+default Rede1_Einstieg4 = "OptionD1"
 
-default Rede1_Reaktion1 = "OptionA"
-default Rede1_Reaktion2 = "OptionB"
-default Rede1_Reaktion3 = "OptionC"
-default Rede1_Reaktion4 = "OptionD"
+default Rede1_Reaktion1 = "OptionA2"
+default Rede1_Reaktion2 = "OptionB2"
+default Rede1_Reaktion3 = "OptionC2"
+default Rede1_Reaktion4 = "OptionD2"
 
-default Rede1_Hinführung1 = "OptionA"
-default Rede1_Hinführung2 = "OptionB"
-default Rede1_Hinführung3 = "OptionC"
-default Rede1_Hinführung4 = "OptionD"
+default Rede1_Hinführung1 = "OptionA3"
+default Rede1_Hinführung2 = "OptionB3"
+default Rede1_Hinführung3 = "OptionC3"
+default Rede1_Hinführung4 = "OptionD3"
 
-default Rede1_Problem1 = "OptionA"
-default Rede1_Problem2 = "OptionB"
-default Rede1_Problem3 = "OptionC"
-default Rede1_Problem4 = "OptionD"
+default Rede1_Problem1 = "OptionA4"
+default Rede1_Problem2 = "OptionB4"
+default Rede1_Problem3 = "OptionC4"
+default Rede1_Problem4 = "OptionD4"
 
-default Rede1_Erkenntnis1 = "OptionA"
-default Rede1_Erkenntnis2 = "OptionB"
-default Rede1_Erkenntnis3 = "OptionC"
-default Rede1_Erkenntnis4 = "OptionD"
+default Rede1_Erkenntnis1 = "OptionA5"
+default Rede1_Erkenntnis2 = "OptionB5"
+default Rede1_Erkenntnis3 = "OptionC5"
+default Rede1_Erkenntnis4 = "OptionD5"
 
-default Rede1_Aufruf1 = "OptionA"
-default Rede1_Aufruf2 = "OptionB"
-default Rede1_Aufruf3 = "OptionC"
-default Rede1_Aufruf4 = "OptionD"
+default Rede1_Aufruf1 = "OptionA6"
+default Rede1_Aufruf2 = "OptionB6"
+default Rede1_Aufruf3 = "OptionC6"
+default Rede1_Aufruf4 = "OptionD6"
 
 
 
