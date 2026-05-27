@@ -18,6 +18,17 @@ screen Rede_Menu_Style:
         ypos 10
         vbox:
             text"[Aggression]"
+    
+    frame:
+        xpos 2000
+        ypos 10
+        vbox:
+            text"[Speech[0]]"
+            text"[Speech[1]]"
+            text"[Speech[2]]"
+            text"[Speech[3]]"
+            text"[Speech[4]]"
+            text"[Speech[5]]"
 
 
     button:
@@ -50,11 +61,10 @@ screen Rede_Menu_Style:
                 else:
                     text "[Rede1_Aufruf1]"
         action[
-            #Function(renpy.notify, "Das klappt"),
             Function(Decisions.__setitem__,which_decision - 1, 1),
             SetVariable("Aggression", Aggression+1),
- 
-            Jump("Decision_stage_1")
+            SetVariable("Which_decision", which_decision+1),
+            Jump(expression="Decision_stage_"+str(which_decision))
         ]
         
 
@@ -88,10 +98,10 @@ screen Rede_Menu_Style:
                 else:
                     text "[Rede1_Aufruf2]"
         action[
-            Function(renpy.notify, "Das klappt"),
             Function(Decisions.__setitem__,which_decision - 1, 2),
             SetVariable("Aggression", Aggression+2),
-            Jump("Decision_stage_1")
+            SetVariable("Which_decision", which_decision+1),
+            Jump(expression="Decision_stage_"+str(which_decision))
         ]
 
     button:
@@ -124,10 +134,10 @@ screen Rede_Menu_Style:
                 else:
                     text "[Rede1_Aufruf3]"
         action[
-            Function(renpy.notify, "Das klappt"),
             Function(Decisions.__setitem__,which_decision - 1, 3),
             SetVariable("Aggression", Aggression-1),
-            Jump("Decision_stage_1")
+            SetVariable("Which_decision", which_decision+1),
+            Jump(expression="Decision_stage_"+str(which_decision))
         ]
 
     button:
@@ -159,10 +169,10 @@ screen Rede_Menu_Style:
                 else:
                     text "[Rede1_Aufruf4]"
         action[
-            Function(renpy.notify, "Das klappt"),
             Function(Decisions.__setitem__,which_decision - 1, 4),
             SetVariable("Aggression", Aggression-2),
-            Jump("Decision_stage_1")
+            SetVariable("Which_decision", which_decision+1),
+            Jump(expression="Decision_stage_"+str(which_decision))
         ]
 
 

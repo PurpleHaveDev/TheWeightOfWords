@@ -23,6 +23,14 @@ default Szenario = 1
 default Aggression = 0
 default Decisions = [0,0,0,0,0,0]
 default which_decision = 1
+default Speech = ["...","...","...","...","...","..."] #Array, das die aktuell gewählte Optionen der Rede speichert und anzeigt
+
+default Decision1 = False
+default Decision2 = False
+default Decision3 = False
+default Decision4 = False
+default Decision5 = False
+default Decision6 = False
 
 #////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #Die Textblöcke für die verschiendenen Reden. Modular, dass man die Strings und Längen verändern kann
