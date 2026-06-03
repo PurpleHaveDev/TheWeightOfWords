@@ -64,7 +64,8 @@ screen Rede_Menu_Style:
             Function(Decisions.__setitem__,which_decision - 1, 1),
             SetVariable("Aggression", Aggression+1),
             SetVariable("Which_decision", which_decision+1),
-            Jump(expression="Decision_stage_"+str(which_decision))
+            #Jump(expression="Decision_stage_"+str(which_decision))
+            Jump("Decision_stage_1")
         ]
         
 
@@ -101,7 +102,7 @@ screen Rede_Menu_Style:
             Function(Decisions.__setitem__,which_decision - 1, 2),
             SetVariable("Aggression", Aggression+2),
             SetVariable("Which_decision", which_decision+1),
-            Jump(expression="Decision_stage_"+str(which_decision))
+            #Jump(expression="Decision_stage_"+str(which_decision))
         ]
 
     button:
@@ -137,7 +138,7 @@ screen Rede_Menu_Style:
             Function(Decisions.__setitem__,which_decision - 1, 3),
             SetVariable("Aggression", Aggression-1),
             SetVariable("Which_decision", which_decision+1),
-            Jump(expression="Decision_stage_"+str(which_decision))
+            #Jump(expression="Decision_stage_"+str(which_decision))
         ]
 
     button:
