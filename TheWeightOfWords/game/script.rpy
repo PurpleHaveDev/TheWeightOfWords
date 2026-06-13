@@ -107,12 +107,18 @@ label Game_Start:
         menu:
             "Szenario1":
                 $Szenario = 1
+                $Aggression = 0
+                $Decisions= [0,0,0,0,0,0]
+                $Which_decision= 1
                 jump Szenario1
             "Szenario2":
                 $Szhenario = 2
+                $Szenario = 1
+                $Aggression = 0
+                $Decisions= [0,0,0,0,0,0]
+                $Which_decision= 1
                 pass #jump Szenario2
             "Szenario3":
-                $Szenario = 3
                 pass #jump Szenario3
 
     else:

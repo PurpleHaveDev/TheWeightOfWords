@@ -98,7 +98,7 @@ if English==False:
                 $Decision4 = False 
             else:
                 pass
-        $Decision4 = True
+        $Decision5 = True
         jump Decision
 
     label Decision_stage_5:
@@ -119,7 +119,6 @@ if English==False:
                 $Decision5 = False 
             else:
                 pass
-        $Decision5 = False 
         $Decision6 = True
         jump Decision
 
@@ -154,6 +153,12 @@ if English==False:
         NW "Platzhalter Text."
         NW "Platzhalter Text.."
         NW "Platzhalter Text..."
+        $Szenario = 1
+        $Szenario = 1
+        $Aggression = 0
+        $Decisions= [0,0,0,0,0,0] 
+        $which_decision= 1
+        $Speech = ["...","...","...","...","...","..."]
         jump start  
 
 
