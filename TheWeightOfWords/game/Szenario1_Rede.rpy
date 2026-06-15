@@ -138,9 +138,10 @@ if English==False:
             elif Decisions[5]==4:
                 $Speech[5] = ["Rede1_Aufruf4"]
                 $Decision6 = False
+
             else:
                 pass
-        jump Aftermath
+        jump Decision
         
                                                                     # Als nächstes muss unbedingt ein Variablen Array erstellt werden, das trackt, welche Option gewählt wurde. 
                                                                     # Fragen zu Klären: Wie viele Varianten von Auswirkungen -"Enden"- soll es geben?
@@ -148,11 +149,27 @@ if English==False:
                                                                     # Wie soll dir finale form der Auswirkungen aussehen? png's, animationen, Text?
                                                                     # Wie können wir den Punkt Hass und Manipulation noch härter heimhämern?                                                               
 
-    label Aftermath:                
-        NA "Sieh nun die Auswirkungen deiner Rede auf die Sachlage."                
-        NW "Platzhalter Text."
-        NW "Platzhalter Text.."
-        NW "Platzhalter Text..."
+    label Decision_stage_7:                
+        NA "Sieh nun die Auswirkungen deiner Rede auf die Sachlage."      
+        if Aggression >= 7:
+            NW "grr Platzhalter Text."
+            NW "grr Platzhalter Text.."
+            NW "grr Platzhalter Text..."
+        elif Aggression >=1 and Aggression <=6:
+            NW "hrr Platzhalter Text."
+            NW "hrr Platzhalter Text.."
+            NW "hrr Platzhalter Text..."
+        elif Aggression >=-6 and Aggression <=0:
+            NW "uhh Platzhalter Text."
+            NW "uhh Platzhalter Text.."
+            NW "uhh Platzhalter Text..."
+        else:
+            NW "nah Platzhalter Text."
+            NW "nah Platzhalter Text.."
+            NW "nah Platzhalter Text..."
+
+
+        
         $Szenario = 1
         $Szenario = 1
         $Aggression = 0
