@@ -152,21 +152,30 @@ if English==False:
     label Decision_stage_7:                
         NA "Sieh nun die Auswirkungen deiner Rede auf die Sachlage."      
         if Aggression >= 7:
-            NW "grr Platzhalter Text."
-            NW "grr Platzhalter Text.."
-            NW "grr Platzhalter Text..."
+            NW "Das Kabinett erklärte den Nachbarstaaten wenige Tage nach dem Anschlag den Krieg. Was eine kurze militärische Reaktion auf den Terror sein sollte, wurde zu einem Konflikt, der die Region für Generationen prägte. Die Bevölkerung war zunächst geeint."
+            NW "Aber je länger der Krieg andauerte, desto tiefer wurden die Risse. Die Wirtschaft brach unter den Kriegskosten ein. Verfolgung und Hass fraßen sich durch die Gesellschaft."
+            NW "In der Forschung gilt die Rede vom Siegesplatz als der Wendepunkt, an dem der Weg in diesen Krieg eingeschlagen wurde. Noch heute, Jahrzehnte später, ist das Land gespalten."
+            NW "Immer wieder aufkeimende Konflikte, Gewalt und Misstrauen definieren Politik und Gesellschaft."
         elif Aggression >=1 and Aggression <=6:
-            NW "hrr Platzhalter Text."
-            NW "hrr Platzhalter Text.."
-            NW "hrr Platzhalter Text..."
+            NW "Die Ermittlungen nach dem Anschlag führten zu Verhaftungen. Die Netzwerke hinter dem Attentat wurden zerschlagen. Das Vertrauen in den Staat stieg – in großen Teilen der Bevölkerung. Das gemeinsame Feindbild half, die Reihen zu schließen."
+            NW "Doch die verschärften Sicherheitsmaßnahmen der folgenden Jahre hatten ihren Preis. Minderheiten und Migranten aus den Nachbarländern gerieten immer wieder unter Verdacht. "
+            NW "Heftige Debatten über Ausgrenzung, Rassismus und Diskriminierung prägten das Land noch auf Jahre. Das Land hielt dennoch zusammen."
+            NW "Es behauptete sich gegen extremistische Kräfte im In- und Ausland. Ob dieser Zusammenhalt trotz der Ausgrenzung gelang oder wegen ihr, darüber streitet die Forschung bis heute."
+            NW "Die Rede vom Siegesplatz gilt als Ausgangspunkt für diesen kämpferischen Weg, der jedoch gesellschaftlich umstritten ist."
         elif Aggression >=-6 and Aggression <=0:
-            NW "uhh Platzhalter Text."
-            NW "uhh Platzhalter Text.."
-            NW "uhh Platzhalter Text..."
+            NW "Die gesellschaftliche Spaltung, die die Täter beabsichtigt hatten, blieb aus. Das Land rang öffentlich um den richtigen Umgang mit Trauer, Sicherheit und Zusammenhalt – "
+            NW "in Parlamentsdebatten, in Zeitungen, im Alltag an der Kaffeemaschine. Dieser Streit verlangsamte Entscheidungen."
+            NW "Er hielt das Land aber auch zusammen. Aus oppositionellen Kreisen wurde der Präsidentin nach ihrer Rede immer wieder Schwäche vorgehalten."
+            NW "Diese Gruppe blieb in der Minderheit – bestimmte aber lautstark die Debatten."
+            NW "Die Rede vom Siegesplatz gilt als Ausgangspunkt für den zähen, manchmal lähmenden, aber letztlich tragfähigen Weg, den das Land nach dem Anschlag ging."
         else:
-            NW "nah Platzhalter Text."
-            NW "nah Platzhalter Text.."
-            NW "nah Platzhalter Text..."
+            NW "In den Monaten nach dem Anschlag schoben die politischen Lager einander die Verantwortung zu. Eine klare Linie blieb aus. Die Präsidentin überstand ein Misstrauensvotum nicht."
+            NW "Das Vertrauen in die Institutionen sank schleichend, aber stetig. Die Wirtschaft stagnierte. Drei Kabinette scheiterten in drei Jahren."
+            NW "Seitdem wechselten Minderheitsregierungen einander ab. Kaum eine politische Kraft schafft es noch, das Land hinter sich zu vereinen."
+            NW "Die fehlenden Konsequenzen nach dem ersten Anschlag hatten einen Preis: Zwei weitere Attentate erschütterten das Land keine fünf Jahre später."
+            NW "Das Land rutschte in eine Phase der Unruhen und Ausschreitungen ab, aus der es bis heute nicht herausgefunden hat. Immer wieder aufflammende Bürgerkriege prägen Alltag und Politik."
+            NW "Dass in der Rede auf dem Siegesplatz kein klarer Pfad eingeschlagen wurde, gilt unter Historikern heute als Ausgangspunkt für den Niedergang."
+            
 
 
         

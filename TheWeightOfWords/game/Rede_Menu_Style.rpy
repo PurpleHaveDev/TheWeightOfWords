@@ -72,17 +72,17 @@ screen Rede_Menu_Style:
                         xalign 0.5                                   
                         yalign 0.5
                         if which_decision==1:
-                            text "[Rede1_Einstieg2]"
+                            text Rede1_Einstieg2
                         elif which_decision==2:
-                            text "[Rede1_Reaktion2]"
+                            text Rede1_Reaktion2
                         elif which_decision==3:
-                            text "[Rede1_Hinführung2]"
+                            text Rede1_Hinfuehrung2
                         elif which_decision==4:
-                            text "[Rede1_Problem2]"
+                            text Rede1_Problem2
                         elif which_decision==5:
-                            text "[Rede1_Erkenntnis2]"
+                            text Rede1_Erkenntnis2
                         else:
-                            text "[Rede1_Aufruf2]"
+                            text Rede1_Aufruf2
                 action[
                     Function(Decisions.__setitem__,which_decision - 1, 2),
                     SetVariable("Aggression", Aggression+2),
@@ -110,17 +110,17 @@ screen Rede_Menu_Style:
                         xalign 0.5                                   
                         yalign 0.5
                         if which_decision==1:
-                            text "[Rede1_Einstieg2]"
+                            text Rede1_Einstieg2
                         elif which_decision==2:
-                            text "[Rede1_Reaktion2]"
+                            text Rede1_Reaktion2
                         elif which_decision==3:
-                            text "[Rede1_Hinführung2]"
+                            text Rede1_Hinfuehrung2
                         elif which_decision==4:
-                            text "[Rede1_Problem2]"
+                            text Rede1_Problem2
                         elif which_decision==5:
-                            text "[Rede1_Erkenntnis2]"
+                            text Rede1_Erkenntnis2
                         else:
-                            text "[Rede1_Aufruf2]"
+                            text Rede1_Aufruf2
         
         if which_decision<=2 or Aggression>-6 and Aggression<8:
             button:                                                                                           #Kämpferisch
@@ -142,17 +142,17 @@ screen Rede_Menu_Style:
                         xalign 0.5                                                                              # use (grid "width" "height":) for combined hbox and vbox aka. a Grid
                         yalign 0.5
                         if which_decision==1:
-                            text "[Rede1_Einstieg1]"
+                            text Rede1_Einstieg1
                         elif which_decision==2:
-                            text "[Rede1_Reaktion1]"
+                            text Rede1_Reaktion1
                         elif which_decision==3:
-                            text "[Rede1_Hinführung1]"
+                            text Rede1_Hinfuehrung1
                         elif which_decision==4:
-                            text "[Rede1_Problem1]"
+                            text Rede1_Problem1
                         elif which_decision==5:
-                            text "[Rede1_Erkenntnis1]"
+                            text Rede1_Erkenntnis1
                         else:
-                            text "[Rede1_Aufruf1]"
+                            text Rede1_Aufruf1
                 action[
                     Function(Decisions.__setitem__,which_decision - 1, 1),
                     SetVariable("Aggression", Aggression+1),
@@ -180,17 +180,17 @@ screen Rede_Menu_Style:
                         xalign 0.5                                   
                         yalign 0.5
                         if which_decision==1:
-                            text "[Rede1_Einstieg2]"
+                            text Rede1_Einstieg2
                         elif which_decision==2:
-                            text "[Rede1_Reaktion2]"
+                            text Rede1_Reaktion2
                         elif which_decision==3:
-                            text "[Rede1_Hinführung2]"
+                            text Rede1_Hinfuehrung2
                         elif which_decision==4:
-                            text "[Rede1_Problem2]"
+                            text Rede1_Problem2
                         elif which_decision==5:
-                            text "[Rede1_Erkenntnis2]"
+                            text Rede1_Erkenntnis2
                         else:
-                            text "[Rede1_Aufruf2]"
+                            text Rede1_Aufruf2
             
          
         if which_decision<=2 or Aggression>-8 and Aggression<6:
@@ -213,17 +213,17 @@ screen Rede_Menu_Style:
                         xalign 0.5                                   
                         yalign 0.5
                         if which_decision==1:
-                            text "[Rede1_Einstieg3]"
+                            text Rede1_Einstieg3
                         elif which_decision==2:
-                            text "[Rede1_Reaktion3]"
+                            text Rede1_Reaktion3
                         elif which_decision==3:
-                            text "[Rede1_Hinführung3]"
+                            text Rede1_Hinfuehrung3
                         elif which_decision==4:
-                            text "[Rede1_Problem3]"
+                            text Rede1_Problem3
                         elif which_decision==5:
-                            text "[Rede1_Erkenntnis3]"
+                            text Rede1_Erkenntnis3
                         else:
-                            text "[Rede1_Aufruf3]"
+                            text Rede1_Aufruf3
                 action[
                     Function(Decisions.__setitem__,which_decision - 1, 3),
                     SetVariable("Aggression", Aggression-1),
@@ -251,17 +251,17 @@ screen Rede_Menu_Style:
                         xalign 0.5                                   
                         yalign 0.5
                         if which_decision==1:
-                            text "[Rede1_Einstieg2]"
+                            text Rede1_Einstieg2
                         elif which_decision==2:
-                            text "[Rede1_Reaktion2]"
+                            text Rede1_Reaktion2
                         elif which_decision==3:
-                            text "[Rede1_Hinführung2]"
+                            text Rede1_Hinfuehrung2
                         elif which_decision==4:
-                            text "[Rede1_Problem2]"
+                            text Rede1_Problem2
                         elif which_decision==5:
-                            text "[Rede1_Erkenntnis2]"
+                            text Rede1_Erkenntnis2
                         else:
-                            text "[Rede1_Aufruf2]"
+                            text Rede1_Aufruf2
             
         if which_decision<=2 or Aggression<4:
             button:                                                                                                      #beschwichtigend
@@ -282,17 +282,17 @@ screen Rede_Menu_Style:
                         xalign 0.5                                                                  
                         yalign 0.5
                         if which_decision==1:
-                            text "[Rede1_Einstieg4]"
+                            text Rede1_Einstieg4
                         elif which_decision==2:
-                            text "[Rede1_Reaktion4]"
+                            text Rede1_Reaktion4
                         elif which_decision==3:
-                            text "[Rede1_Hinführung4]"
+                            text Rede1_Hinfuehrung4
                         elif which_decision==4:
-                            text "[Rede1_Problem4]"
+                            text Rede1_Problem4
                         elif which_decision==5:
-                            text "[Rede1_Erkenntnis4]"
+                            text Rede1_Erkenntnis4
                         else:
-                            text "[Rede1_Aufruf4]"
+                            text Rede1_Aufruf4
                 action[
                     Function(Decisions.__setitem__,which_decision - 1, 4),
                     SetVariable("Aggression", Aggression-2),
@@ -320,18 +320,17 @@ screen Rede_Menu_Style:
                         xalign 0.5                                   
                         yalign 0.5
                         if which_decision==1:
-                            text "[Rede1_Einstieg2]"
+                            text Rede1_Einstieg2
                         elif which_decision==2:
-                            text "[Rede1_Reaktion2]"
+                            text Rede1_Reaktion2
                         elif which_decision==3:
-                            text "[Rede1_Hinführung2]"
+                            text Rede1_Hinfuehrung2
                         elif which_decision==4:
-                            text "[Rede1_Problem2]"
+                            text Rede1_Problem2
                         elif which_decision==5:
-                            text "[Rede1_Erkenntnis2]"
+                            text Rede1_Erkenntnis2
                         else:
-                            text "[Rede1_Aufruf2]"
-
+                            text Rede1_Aufruf2
 
 
 
