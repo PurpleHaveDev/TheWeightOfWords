@@ -20,6 +20,7 @@ screen Rede_Menu_Style:
             text"[Aggression]"
     
     frame:
+        background None
         xpos 700
         ypos 50
         add "UI/paper.png":
@@ -50,155 +51,286 @@ screen Rede_Menu_Style:
             action[
                 Jump("Decision_stage_"+str(which_decision))
                 ]
-    else:
-        pass
-    
-    if which_decision <=6:
-        button:                                                                                           #Kämpferisch
-            xpos 200
-            ypos 100
+    else:     
+        if which_decision<=2 or Aggression>-4:
+            button:                                                                                            #Aggressiv
+                xpos 800
+                ypos 100
+                frame:
+                    background None
+                    xpadding 15               
+                    ypadding 15               
+                    #add Solid ("#eb9e51")
+                    add "UI/paper.png":
+                        xsize Box_option_image_width
+                        ysize Box_option_image_height
+                        xalign 0.5
+                        yalign 0.5
+                    xsize Box_option_width
+                    ysize Box_option_height                                                  
+                    vbox:                                                                                  
+                        xalign 0.5                                   
+                        yalign 0.5
+                        if which_decision==1:
+                            text "[Rede1_Einstieg2]"
+                        elif which_decision==2:
+                            text "[Rede1_Reaktion2]"
+                        elif which_decision==3:
+                            text "[Rede1_Hinführung2]"
+                        elif which_decision==4:
+                            text "[Rede1_Problem2]"
+                        elif which_decision==5:
+                            text "[Rede1_Erkenntnis2]"
+                        else:
+                            text "[Rede1_Aufruf2]"
+                action[
+                    Function(Decisions.__setitem__,which_decision - 1, 2),
+                    SetVariable("Aggression", Aggression+2),
+                    SetVariable("Which_decision", which_decision+1),
+                    Jump("Decision_stage_"+str(which_decision))
+                ]
+        else:
             frame:
-                xpadding 15                                                                               #fügt nen coushion rahmen um den text
-                ypadding 15                                                                               #ACHTUNG: Das affected nur den Text, nicht den rahmen selbst. Anstatt den rahmen größer zu machen, skaliert es den Text nach innen
-                #add Solid ("#b1a688")
-                add "UI/paper.png":
-                    xsize Box_option_image_width
-                    ysize Box_option_image_height
-                    xalign 0.5
-                    yalign 0.5
-                xsize Box_option_width
-                ysize Box_option_height                                                  
-                vbox:                                                                                    # vbox and hbox for vertical and horizontally aligned text respectively                                                
-                    xalign 0.5                                                                              # use (grid "width" "height":) for combined hbox and vbox aka. a Grid
-                    yalign 0.5
-                    if which_decision==1:
-                        text "[Rede1_Einstieg1]"
-                    elif which_decision==2:
-                        text "[Rede1_Reaktion1]"
-                    elif which_decision==3:
-                        text "[Rede1_Hinführung1]"
-                    elif which_decision==4:
-                        text "[Rede1_Problem1]"
-                    elif which_decision==5:
-                        text "[Rede1_Erkenntnis1]"
-                    else:
-                        text "[Rede1_Aufruf1]"
-            action[
-                Function(Decisions.__setitem__,which_decision - 1, 1),
-                SetVariable("Aggression", Aggression+1),
-                SetVariable("Which_decision", which_decision+1),
-                Jump("Decision_stage_"+str(which_decision))
-            ]
-
-
-        button:                                                                                            #Aggressiv
-            xpos 800
-            ypos 100
-            frame:
-                xpadding 15               
-                ypadding 15               
-                #add Solid ("#b1a688")
-                add "UI/paper.png":
-                    xsize Box_option_image_width
-                    ysize Box_option_image_height
-                    xalign 0.5
-                    yalign 0.5
-                xsize Box_option_width
-                ysize Box_option_height                                                  
-                vbox:                                                                                  
-                    xalign 0.5                                   
-                    yalign 0.5
-                    if which_decision==1:
-                        text "[Rede1_Einstieg2]"
-                    elif which_decision==2:
-                        text "[Rede1_Reaktion2]"
-                    elif which_decision==3:
-                        text "[Rede1_Hinführung2]"
-                    elif which_decision==4:
-                        text "[Rede1_Problem2]"
-                    elif which_decision==5:
-                        text "[Rede1_Erkenntnis2]"
-                    else:
-                        text "[Rede1_Aufruf2]"
-            action[
-                Function(Decisions.__setitem__,which_decision - 1, 2),
-                SetVariable("Aggression", Aggression+2),
-                SetVariable("Which_decision", which_decision+1),
-                Jump("Decision_stage_"+str(which_decision))
-            ]
-
-        button:                                                                                                #versöhnend
-            xpos 200
-            ypos 700
-            frame:
-                xpadding 15               
-                ypadding 15               
-                #add Solid ("#b1a688")
-                add "UI/paper.png":
-                    xsize Box_option_image_width
-                    ysize Box_option_image_height
-                    xalign 0.5
-                    yalign 0.5
-                xsize Box_option_width
-                ysize Box_option_height                                                  
-                vbox:                                           
-                    xalign 0.5                                   
-                    yalign 0.5
-                    if which_decision==1:
-                        text "[Rede1_Einstieg3]"
-                    elif which_decision==2:
-                        text "[Rede1_Reaktion3]"
-                    elif which_decision==3:
-                        text "[Rede1_Hinführung3]"
-                    elif which_decision==4:
-                        text "[Rede1_Problem3]"
-                    elif which_decision==5:
-                        text "[Rede1_Erkenntnis3]"
-                    else:
-                        text "[Rede1_Aufruf3]"
-            action[
-                Function(Decisions.__setitem__,which_decision - 1, 3),
-                SetVariable("Aggression", Aggression-1),
-                SetVariable("Which_decision", which_decision+1),
-                Jump("Decision_stage_"+str(which_decision))
-            ]
+                background None
+                xpos 800
+                ypos 100
+                frame:
+                    background None
+                    xpadding 15               
+                    ypadding 15     
+                    add "UI/paper.png":
+                        alpha 0.5    
+                        xsize Box_option_image_width
+                        ysize Box_option_image_height
+                        xalign 0.5
+                        yalign 0.5
+                    xsize Box_option_width
+                    ysize Box_option_height  
+                    vbox:                                                                                  
+                        xalign 0.5                                   
+                        yalign 0.5
+                        if which_decision==1:
+                            text "[Rede1_Einstieg2]"
+                        elif which_decision==2:
+                            text "[Rede1_Reaktion2]"
+                        elif which_decision==3:
+                            text "[Rede1_Hinführung2]"
+                        elif which_decision==4:
+                            text "[Rede1_Problem2]"
+                        elif which_decision==5:
+                            text "[Rede1_Erkenntnis2]"
+                        else:
+                            text "[Rede1_Aufruf2]"
         
-        button:                                                                                                      #beschwichtigend
-            xpos 800
-            ypos 700
+        if which_decision<=2 or Aggression>-6 and Aggression<8:
+            button:                                                                                           #Kämpferisch
+                xpos 200
+                ypos 100
+                frame:
+                    background None
+                    xpadding 15                                                                               #fügt nen coushion rahmen um den text
+                    ypadding 15                                                                               #ACHTUNG: Das affected nur den Text, nicht den rahmen selbst. Anstatt den rahmen größer zu machen, skaliert es den Text nach innen
+                    #add Solid ("#b1a688")
+                    add "UI/paper.png":
+                        xsize Box_option_image_width
+                        ysize Box_option_image_height
+                        xalign 0.5
+                        yalign 0.5
+                    xsize Box_option_width
+                    ysize Box_option_height                                                  
+                    vbox:                                                                                    # vbox and hbox for vertical and horizontally aligned text respectively                                                
+                        xalign 0.5                                                                              # use (grid "width" "height":) for combined hbox and vbox aka. a Grid
+                        yalign 0.5
+                        if which_decision==1:
+                            text "[Rede1_Einstieg1]"
+                        elif which_decision==2:
+                            text "[Rede1_Reaktion1]"
+                        elif which_decision==3:
+                            text "[Rede1_Hinführung1]"
+                        elif which_decision==4:
+                            text "[Rede1_Problem1]"
+                        elif which_decision==5:
+                            text "[Rede1_Erkenntnis1]"
+                        else:
+                            text "[Rede1_Aufruf1]"
+                action[
+                    Function(Decisions.__setitem__,which_decision - 1, 1),
+                    SetVariable("Aggression", Aggression+1),
+                    SetVariable("Which_decision", which_decision+1),
+                    Jump("Decision_stage_"+str(which_decision))
+                ]
+        else:
             frame:
-                xpadding 15                                                                 
-                ypadding 15                                                                 
-                add "UI/paper.png":
-                    xsize Box_option_image_width
-                    ysize Box_option_image_height
-                    xalign 0.5
-                    yalign 0.5
-                xsize Box_option_width
-                ysize Box_option_height                                                  
-                vbox:                                                                                                                         
-                    xalign 0.5                                                                  
-                    yalign 0.5
-                    if which_decision==1:
-                        text "[Rede1_Einstieg4]"
-                    elif which_decision==2:
-                        text "[Rede1_Reaktion4]"
-                    elif which_decision==3:
-                        text "[Rede1_Hinführung4]"
-                    elif which_decision==4:
-                        text "[Rede1_Problem4]"
-                    elif which_decision==5:
-                        text "[Rede1_Erkenntnis4]"
-                    else:
-                        text "[Rede1_Aufruf4]"
-            action[
-                Function(Decisions.__setitem__,which_decision - 1, 4),
-                SetVariable("Aggression", Aggression-2),
-                SetVariable("Which_decision", which_decision+1),
-                Jump("Decision_stage_"+str(which_decision))
-            ]
-    else:
-        pass
+                background None
+                xpos 200
+                ypos 100
+                frame:
+                    background None
+                    xpadding 15               
+                    ypadding 15     
+                    add "UI/paper.png":
+                        alpha 0.5    
+                        xsize Box_option_image_width
+                        ysize Box_option_image_height
+                        xalign 0.5
+                        yalign 0.5
+                    xsize Box_option_width
+                    ysize Box_option_height  
+                    vbox:                                                                                  
+                        xalign 0.5                                   
+                        yalign 0.5
+                        if which_decision==1:
+                            text "[Rede1_Einstieg2]"
+                        elif which_decision==2:
+                            text "[Rede1_Reaktion2]"
+                        elif which_decision==3:
+                            text "[Rede1_Hinführung2]"
+                        elif which_decision==4:
+                            text "[Rede1_Problem2]"
+                        elif which_decision==5:
+                            text "[Rede1_Erkenntnis2]"
+                        else:
+                            text "[Rede1_Aufruf2]"
+            
+         
+        if which_decision<=2 or Aggression>-8 and Aggression<6:
+            button:                                                                                                #versöhnend
+                xpos 200
+                ypos 700
+                frame:
+                    background None
+                    xpadding 15               
+                    ypadding 15               
+                    #add Solid ("#b1a688")
+                    add "UI/paper.png":
+                        xsize Box_option_image_width
+                        ysize Box_option_image_height
+                        xalign 0.5
+                        yalign 0.5
+                    xsize Box_option_width
+                    ysize Box_option_height                                                  
+                    vbox:                                           
+                        xalign 0.5                                   
+                        yalign 0.5
+                        if which_decision==1:
+                            text "[Rede1_Einstieg3]"
+                        elif which_decision==2:
+                            text "[Rede1_Reaktion3]"
+                        elif which_decision==3:
+                            text "[Rede1_Hinführung3]"
+                        elif which_decision==4:
+                            text "[Rede1_Problem3]"
+                        elif which_decision==5:
+                            text "[Rede1_Erkenntnis3]"
+                        else:
+                            text "[Rede1_Aufruf3]"
+                action[
+                    Function(Decisions.__setitem__,which_decision - 1, 3),
+                    SetVariable("Aggression", Aggression-1),
+                    SetVariable("Which_decision", which_decision+1),
+                    Jump("Decision_stage_"+str(which_decision))
+                ]
+        else:
+            frame:
+                background None
+                xpos 200
+                ypos 700
+                frame:
+                    background None
+                    xpadding 15               
+                    ypadding 15     
+                    add "UI/paper.png":
+                        alpha 0.5    
+                        xsize Box_option_image_width
+                        ysize Box_option_image_height
+                        xalign 0.5
+                        yalign 0.5
+                    xsize Box_option_width
+                    ysize Box_option_height  
+                    vbox:                                                                                  
+                        xalign 0.5                                   
+                        yalign 0.5
+                        if which_decision==1:
+                            text "[Rede1_Einstieg2]"
+                        elif which_decision==2:
+                            text "[Rede1_Reaktion2]"
+                        elif which_decision==3:
+                            text "[Rede1_Hinführung2]"
+                        elif which_decision==4:
+                            text "[Rede1_Problem2]"
+                        elif which_decision==5:
+                            text "[Rede1_Erkenntnis2]"
+                        else:
+                            text "[Rede1_Aufruf2]"
+            
+        if which_decision<=2 or Aggression<4:
+            button:                                                                                                      #beschwichtigend
+                xpos 800
+                ypos 700
+                frame:
+                    background None
+                    xpadding 15                                                                 
+                    ypadding 15                                                                 
+                    add "UI/paper.png":
+                        xsize Box_option_image_width
+                        ysize Box_option_image_height
+                        xalign 0.5
+                        yalign 0.5
+                    xsize Box_option_width
+                    ysize Box_option_height                                                  
+                    vbox:                                                                                                                         
+                        xalign 0.5                                                                  
+                        yalign 0.5
+                        if which_decision==1:
+                            text "[Rede1_Einstieg4]"
+                        elif which_decision==2:
+                            text "[Rede1_Reaktion4]"
+                        elif which_decision==3:
+                            text "[Rede1_Hinführung4]"
+                        elif which_decision==4:
+                            text "[Rede1_Problem4]"
+                        elif which_decision==5:
+                            text "[Rede1_Erkenntnis4]"
+                        else:
+                            text "[Rede1_Aufruf4]"
+                action[
+                    Function(Decisions.__setitem__,which_decision - 1, 4),
+                    SetVariable("Aggression", Aggression-2),
+                    SetVariable("Which_decision", which_decision+1),
+                    Jump("Decision_stage_"+str(which_decision))
+                ]
+        else:
+            frame:
+                background None
+                xpos 800
+                ypos 700
+                frame:
+                    background None
+                    xpadding 15               
+                    ypadding 15     
+                    add "UI/paper.png":
+                        alpha 0.5    
+                        xsize Box_option_image_width
+                        ysize Box_option_image_height
+                        xalign 0.5
+                        yalign 0.5
+                    xsize Box_option_width
+                    ysize Box_option_height  
+                    vbox:                                                                                  
+                        xalign 0.5                                   
+                        yalign 0.5
+                        if which_decision==1:
+                            text "[Rede1_Einstieg2]"
+                        elif which_decision==2:
+                            text "[Rede1_Reaktion2]"
+                        elif which_decision==3:
+                            text "[Rede1_Hinführung2]"
+                        elif which_decision==4:
+                            text "[Rede1_Problem2]"
+                        elif which_decision==5:
+                            text "[Rede1_Erkenntnis2]"
+                        else:
+                            text "[Rede1_Aufruf2]"
 
 
 

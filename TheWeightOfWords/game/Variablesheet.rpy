@@ -31,39 +31,40 @@ default Decision3 = False
 default Decision4 = False
 default Decision5 = False
 default Decision6 = False
+#////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #Die Textblöcke für die verschiendenen Reden. Modular, dass man die Strings und Längen verändern kann
 #Szenario1
-default Rede1_Einstieg1 = "OptionA1"
-default Rede1_Einstieg2 = "OptionB1"
-default Rede1_Einstieg3 = "OptionC1"
-default Rede1_Einstieg4 = "OptionD1"
+default Rede1_Einstieg1 = "Kämpferisch"
+default Rede1_Einstieg2 = "Aggressiv"
+default Rede1_Einstieg3 = "Versöhnend"
+default Rede1_Einstieg4 = "Beschwichtigend"
 
-default Rede1_Reaktion1 = "OptionA2"
-default Rede1_Reaktion2 = "OptionB2"
-default Rede1_Reaktion3 = "OptionC2"
-default Rede1_Reaktion4 = "OptionD2"
+default Rede1_Reaktion1 = "Kämpferisch"
+default Rede1_Reaktion2 = "Aggressiv"
+default Rede1_Reaktion3 = "Versöhnend"
+default Rede1_Reaktion4 = "Beschwichtigend"
 
-default Rede1_Hinführung1 = "OptionA3"
-default Rede1_Hinführung2 = "OptionB3"
-default Rede1_Hinführung3 = "OptionC3"
-default Rede1_Hinführung4 = "OptionD3"
+default Rede1_Hinführung1 = "Kämpferisch"
+default Rede1_Hinführung2 = "Aggressiv"
+default Rede1_Hinführung3 = "Versöhnend"
+default Rede1_Hinführung4 = "Beschwichtigend"
 
-default Rede1_Problem1 = "OptionA4"
-default Rede1_Problem2 = "OptionB4"
-default Rede1_Problem3 = "OptionC4"
-default Rede1_Problem4 = "OptionD4"
+default Rede1_Problem1 = "Kämpferisch"
+default Rede1_Problem2 = "Aggressiv"
+default Rede1_Problem3 = "Versöhnend"
+default Rede1_Problem4 = "Beschwichtigend"
 
-default Rede1_Erkenntnis1 = "OptionA5"
-default Rede1_Erkenntnis2 = "OptionB5"
-default Rede1_Erkenntnis3 = "OptionC5"
-default Rede1_Erkenntnis4 = "OptionD5"
+default Rede1_Erkenntnis1 = "Kämpferisch"
+default Rede1_Erkenntnis2 = "Aggressiv"
+default Rede1_Erkenntnis3 = "Versöhnend"
+default Rede1_Erkenntnis4 = "Beschwichtigend"
 
-default Rede1_Aufruf1 = "OptionA6"
-default Rede1_Aufruf2 = "OptionB6"
-default Rede1_Aufruf3 = "OptionC6"
-default Rede1_Aufruf4 = "OptionD6"
+default Rede1_Aufruf1 = "Kämpferisch"
+default Rede1_Aufruf2 = "Aggressiv"
+default Rede1_Aufruf3 = "Versöhnend"
+default Rede1_Aufruf4 = "Beschwichtigend"
 
 
 
