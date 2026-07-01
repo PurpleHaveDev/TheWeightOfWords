@@ -103,7 +103,7 @@ label start:
 label Game_Start:
 
     if English==False:
-        NA "Das ist auf Deutsch."
+        NA "DAS NARRATIV"
         menu:
             "Szenario1":
                 $Szenario = 1
@@ -122,7 +122,7 @@ label Game_Start:
                 pass #jump Szenario3
 
     else:
-        NA "This is in English."
+        NA "THE NARRATIVE"
         menu:
             "Scenario1":
                 $Szenario = 1

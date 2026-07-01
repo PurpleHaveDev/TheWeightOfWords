@@ -30,7 +30,9 @@ screen Rede_Menu_Style:
                 yalign 0.5
         vbox:
             xalign 0.5
-            yalign 0.1
+            yalign 0.2
+            xsize 800
+            ysize 500
             text"[Speech[0]]"
             text"[Speech[1]]"
             text"[Speech[2]]"
