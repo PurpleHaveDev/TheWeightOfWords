@@ -13,7 +13,7 @@ label start:
                 jump Game_Start
 
             "Sprache":
-                "Wähle eine Sprache"
+                "Waehle eine Sprache"
                 menu:
                     "Deutsch":
                         $English=False
@@ -24,33 +24,33 @@ label start:
 
             "Entwickler":
                 if English==False:
-                    "Kühle Menschen haben an diesem Spiel gearbeitet."
+                    "Kuehle Menschen haben an diesem Spiel gearbeitet."
                     jump start
                 else:
                     "Cool people have worked on this game."
                     jump start
 
-            "Lautstärke":
-                label LautstärkeDE:                              #Lautstärke wird prozentual gerechnet, deswegen "0.0~" 
+            "Lautstaerke":
+                label LautstaerkeDE:                              #Lautstaerke wird prozentual gerechnet, deswegen "0.0~" 
                     if English==False:
                             menu:
                                 "Lauter":
-                                    $Lautstärke=Lautstärke+0.05
-                                    jump LautstärkeDE
+                                    $Lautstaerke=Lautstaerke+0.05
+                                    jump LautstaerkeDE
                                 "Leiser":
-                                    $Lautstärke=Lautstärke-0.05
-                                    jump LautstärkeDE
-                                "Zurück":
-                                    jump start                      #Muss noch nen Weg finden, dass man hier nur ein menu zurück geschickt wird/in ndem Menu bleibt
+                                    $Lautstaerke=Lautstaerke-0.05
+                                    jump LautstaerkeDE
+                                "Zurueck":
+                                    jump start                      #Muss noch nen Weg finden, dass man hier nur ein menu zurueck geschickt wird/in ndem Menu bleibt
                         
                     else:
                             menu:
                                 "Louder":
-                                    $Lautstärke=Lautstärke+0.05
-                                    jump LautstärkeDE
+                                    $Lautstaerke=Lautstaerke+0.05
+                                    jump LautstaerkeDE
                                 "Quieter":
-                                    $Lautstärke=Lautstärke-0.05
-                                    jump LautstärkeDE
+                                    $Lautstaerke=Lautstaerke-0.05
+                                    jump LautstaerkeDE
                                 "Back":
                                     jump start
     else: 
@@ -69,7 +69,7 @@ label start:
                         jump start
             "Credits":
                 if English==False:
-                    "Kühle Menschen haben an diesem Spiel gearbeitet."
+                    "Kuehle Menschen haben an diesem Spiel gearbeitet."
                     jump start
                 else:
                     "Cool people have worked on this game."
@@ -77,26 +77,26 @@ label start:
 
 
             "Volume":
-                label LautstärkeEN:                                        #Lautstärke wird prozentual gerechnet, deswegen "0.0~" 
+                label LautstaerkeEN:                                        #Lautstaerke wird prozentual gerechnet, deswegen "0.0~" 
                     if English==False:
                             menu:
                                 "Lauter":
-                                    $Lautstärke=Lautstärke++0.05      
-                                    jump LautstärkeEN                                                       
+                                    $Lautstaerke=Lautstaerke++0.05      
+                                    jump LautstaerkeEN                                                       
                                 "Leiser":
-                                    $Lautstärke=Lautstärke--0.05    
-                                    jump LautstärkeEN                      
-                                "Zurück":
-                                    jump start                      #Muss noch nen Weg finden, dass man hier nur ein menu zurück geschickt wird/in ndem Menu bleibt
+                                    $Lautstaerke=Lautstaerke--0.05    
+                                    jump LautstaerkeEN                      
+                                "Zurueck":
+                                    jump start                      #Muss noch nen Weg finden, dass man hier nur ein menu zurueck geschickt wird/in ndem Menu bleibt
                                 
                     else:
                             menu:
                                 "Louder":
-                                    $Lautstärke=Lautstärke++0.05
-                                    jump LautstärkeEN
+                                    $Lautstaerke=Lautstaerke++0.05
+                                    jump LautstaerkeEN
                                 "Quieter":
-                                    $Lautstärke=Lautstärke--0.05
-                                    jump LautstärkeEN
+                                    $Lautstaerke=Lautstaerke--0.05
+                                    jump LautstaerkeEN
                                 "Back":
                                     jump start
 
@@ -128,7 +128,7 @@ label Game_Start:
                 $Szenario = 1
                 jump Szenario1
             "Scenario2":
-                $Szhenario = 2
+                $Szenario = 2
                 pass #jump Szenario2
             "Scenario3":
                 $Szenario = 3

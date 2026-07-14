@@ -9,6 +9,12 @@ default B_height = "Box_option_height"
 default B_png_width = "Box_option_image_width"
 default B_png_heigt = "Box_option_image_height"
 
+default Y_Screenscroll = "Zeitungshöhe"
+default Y_Phonescroll = "Handyhöhe"
+default Y_Datascroll = "Aktenhöhe"
+
+default Page = 1
+
 default English = False
 default Character_1="Narrator"
 default Character_2="NEWSPAPER"
@@ -22,6 +28,7 @@ default Szenario = 1
 
 default Aggression = 0
 default Decisions = [0,0,0,0,0,0]
+default Auswirkung = ["","","","","",""]
 default which_decision = 1
 default Speech = ["...","...","...","...","...","..."] #Array, das die aktuell gewählte Optionen der Rede speichert und anzeigt
 

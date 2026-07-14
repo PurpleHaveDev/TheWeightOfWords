@@ -3,36 +3,41 @@ screen Rede_Menu_Style:
     style_prefix "Decision_UI"
 
     frame:
-        xpos 700
-        ypos 10
-        text "[which_decision]"
+        background None
+        xalign 0.5
+        yalign 0.5               
+        add "UI/Speech_bg.png":
+            xsize 2560
+            ysize 1440
 
-    frame:
-        xpos 800
-        ypos 10
-        vbox:
-            text"[Decisions]"
-
-    frame:
-        xpos 600
-        ypos 10
-        vbox:
-            text"[Aggression]"
-    
+#    frame:
+#        xpos 700
+#        ypos 10
+#        text "[which_decision]"
+#
+#    frame:
+#        xpos 800
+#        ypos 10 
+#        vbox:
+#            text"[Decisions]"
+#
+#    frame:
+#        xpos 600
+#        ypos 10
+#        vbox:
+#            text"[Aggression]"
+#    
     frame:
         background None
-        xpos 700
-        ypos 50
-        add "UI/paper.png":
-                xsize 1500
-                ysize 1900
-                xalign 0.5
-                yalign 0.5
+        xpos 1730
+        ypos 100
+        #add "UI/paper.png":
+        #        xsize 1500
+        #        ysize 1900
+        #        xalign 0.5
+        #        yalign 0.5
         vbox:
-            xalign 0.5
-            yalign 0.2
-            xsize 800
-            ysize 500
+            xsize 700
             text"[Speech[0]]"
             text"[Speech[1]]"
             text"[Speech[2]]"
@@ -40,12 +45,25 @@ screen Rede_Menu_Style:
             text"[Speech[4]]"
             text"[Speech[5]]"
 
+
+
+    frame:
+        background None
+        xalign 0.5
+        yalign 0.5               
+        add "UI/Audience_Back.png":
+            xsize 2560
+            ysize 1440
+            xanchor 1
+            xzoom -1
+
+
     if which_decision>=7:
         button:
             xsize 500
             ysize 120
-            xpos 1700
-            ypos 1100
+            xpos 500
+            ypos 500
             vbox:
                 yalign 0.5
                 xalign 0.5
@@ -53,286 +71,292 @@ screen Rede_Menu_Style:
             action[
                 Jump("Decision_stage_"+str(which_decision))
                 ]
+
+
+
+
+###########################################################################################
+
     else:     
         if which_decision<=2 or Aggression>-4:
-            button:                                                                                            #Aggressiv
-                xpos 800
-                ypos 100
-                frame:
-                    background None
-                    xpadding 15               
-                    ypadding 15               
-                    #add Solid ("#eb9e51")
-                    add "UI/paper.png":
-                        xsize Box_option_image_width
-                        ysize Box_option_image_height
-                        xalign 0.5
-                        yalign 0.5
-                    xsize Box_option_width
-                    ysize Box_option_height                                                  
-                    vbox:                                                                                  
-                        xalign 0.5                                   
-                        yalign 0.5
-                        if which_decision==1:
-                            text Rede1_Einstieg2
-                        elif which_decision==2:
-                            text Rede1_Reaktion2
-                        elif which_decision==3:
-                            text Rede1_Hinfuehrung2
-                        elif which_decision==4:
-                            text Rede1_Problem2
-                        elif which_decision==5:
-                            text Rede1_Erkenntnis2
-                        else:
-                            text Rede1_Aufruf2
+     
+            imagebutton:
+                idle "UI/Choice2_idle.png"
+                hover "UI/Choice2_hover.png"
+                focus_mask True                                      
+
                 action[
                     Function(Decisions.__setitem__,which_decision - 1, 2),
                     SetVariable("Aggression", Aggression+2),
                     SetVariable("Which_decision", which_decision+1),
                     Jump("Decision_stage_"+str(which_decision))
                 ]
+            frame:
+                background None
+                xpos 900
+                ypos 220
+                vbox:                                                                                  
+                    xalign 0.5                                   
+                    yalign 0.5
+                    xsize 550
+                    if which_decision==1:
+                        text Rede1_Einstieg2
+                    elif which_decision==2:
+                        text Rede1_Reaktion2
+                    elif which_decision==3:
+                        text Rede1_Hinfuehrung2
+                    elif which_decision==4:
+                        text Rede1_Problem2
+                    elif which_decision==5:
+                        text Rede1_Erkenntnis2
+                    else:
+                        text Rede1_Aufruf2
         else:
             frame:
                 background None
-                xpos 800
-                ypos 100
+                add "UI/Choice2_idle.png":
+                    alpha 0.5    
+                    xalign 0.5
+                    yalign 0.5
                 frame:
                     background None
-                    xpadding 15               
-                    ypadding 15     
-                    add "UI/paper.png":
-                        alpha 0.5    
-                        xsize Box_option_image_width
-                        ysize Box_option_image_height
-                        xalign 0.5
-                        yalign 0.5
-                    xsize Box_option_width
-                    ysize Box_option_height  
+                    xpos 900
+                    ypos 220
                     vbox:                                                                                  
                         xalign 0.5                                   
                         yalign 0.5
+                        xsize 550
                         if which_decision==1:
-                            text Rede1_Einstieg2
+                            text Rede1_Einstieg2:
+                                color "#8b8a73"
                         elif which_decision==2:
-                            text Rede1_Reaktion2
+                            text Rede1_Reaktion2:
+                                color "#8b8a73"
                         elif which_decision==3:
-                            text Rede1_Hinfuehrung2
+                            text Rede1_Hinfuehrung2:
+                                color "#8b8a73"
                         elif which_decision==4:
-                            text Rede1_Problem2
+                            text Rede1_Problem2:
+                                color "#8b8a73"
                         elif which_decision==5:
-                            text Rede1_Erkenntnis2
+                            text Rede1_Erkenntnis2:
+                                color "#8b8a73"
                         else:
-                            text Rede1_Aufruf2
-        
+                            text Rede1_Aufruf2:
+                                color "#8b8a73"
+
+################################################################################################
+
+
         if which_decision<=2 or Aggression>-6 and Aggression<8:
-            button:                                                                                           #Kämpferisch
-                xpos 200
-                ypos 100
-                frame:
-                    background None
-                    xpadding 15                                                                               #fügt nen coushion rahmen um den text
-                    ypadding 15                                                                               #ACHTUNG: Das affected nur den Text, nicht den rahmen selbst. Anstatt den rahmen größer zu machen, skaliert es den Text nach innen
-                    #add Solid ("#b1a688")
-                    add "UI/paper.png":
-                        xsize Box_option_image_width
-                        ysize Box_option_image_height
-                        xalign 0.5
-                        yalign 0.5
-                    xsize Box_option_width
-                    ysize Box_option_height                                                  
-                    vbox:                                                                                    # vbox and hbox for vertical and horizontally aligned text respectively                                                
-                        xalign 0.5                                                                              # use (grid "width" "height":) for combined hbox and vbox aka. a Grid
-                        yalign 0.5
-                        if which_decision==1:
-                            text Rede1_Einstieg1
-                        elif which_decision==2:
-                            text Rede1_Reaktion1
-                        elif which_decision==3:
-                            text Rede1_Hinfuehrung1
-                        elif which_decision==4:
-                            text Rede1_Problem1
-                        elif which_decision==5:
-                            text Rede1_Erkenntnis1
-                        else:
-                            text Rede1_Aufruf1
+            imagebutton:
+                idle "UI/Choice1_idle.png"
+                hover "UI/Choice1_hover.png"
+                focus_mask True  
                 action[
                     Function(Decisions.__setitem__,which_decision - 1, 1),
                     SetVariable("Aggression", Aggression+1),
                     SetVariable("Which_decision", which_decision+1),
                     Jump("Decision_stage_"+str(which_decision))
                 ]
-        else:
             frame:
                 background None
                 xpos 200
-                ypos 100
+                ypos 220
+                vbox:                                                                                  
+                    xalign 0.5                                   
+                    yalign 0.5
+                    xsize 550
+                    if which_decision==1:
+                        text Rede1_Einstieg1
+                    elif which_decision==2:
+                        text Rede1_Reaktion1
+                    elif which_decision==3:
+                        text Rede1_Hinfuehrung1
+                    elif which_decision==4:
+                        text Rede1_Problem1
+                    elif which_decision==5:
+                        text Rede1_Erkenntnis1
+                    else:
+                        text Rede1_Aufruf1
+
+        else:
+            frame:
+                background None
+                add "UI/Choice1_idle.png":
+                    alpha 0.5    
+                    xalign 0.5
+                    yalign 0.5
                 frame:
                     background None
-                    xpadding 15               
-                    ypadding 15     
-                    add "UI/paper.png":
-                        alpha 0.5    
-                        xsize Box_option_image_width
-                        ysize Box_option_image_height
-                        xalign 0.5
-                        yalign 0.5
-                    xsize Box_option_width
-                    ysize Box_option_height  
+                    xpos 200
+                    ypos 220
                     vbox:                                                                                  
                         xalign 0.5                                   
                         yalign 0.5
+                        xsize 550
                         if which_decision==1:
-                            text Rede1_Einstieg2
+                            text Rede1_Einstieg1:
+                                color "#8b8a73"
                         elif which_decision==2:
-                            text Rede1_Reaktion2
+                            text Rede1_Reaktion1:
+                                color "#8b8a73"
                         elif which_decision==3:
-                            text Rede1_Hinfuehrung2
+                            text Rede1_Hinfuehrung1:
+                                color "#8b8a73"
                         elif which_decision==4:
-                            text Rede1_Problem2
+                            text Rede1_Problem1:
+                                color "#8b8a73"
                         elif which_decision==5:
-                            text Rede1_Erkenntnis2
+                            text Rede1_Erkenntnis1:
+                                color "#8b8a73"
                         else:
-                            text Rede1_Aufruf2
-            
-         
+                            text Rede1_Aufruf1:
+                                color "#8b8a73"
+        
+###########################################################################################################        
+        
         if which_decision<=2 or Aggression>-8 and Aggression<6:
-            button:                                                                                                #versöhnend
-                xpos 200
-                ypos 700
-                frame:
-                    background None
-                    xpadding 15               
-                    ypadding 15               
-                    #add Solid ("#b1a688")
-                    add "UI/paper.png":
-                        xsize Box_option_image_width
-                        ysize Box_option_image_height
-                        xalign 0.5
-                        yalign 0.5
-                    xsize Box_option_width
-                    ysize Box_option_height                                                  
-                    vbox:                                           
-                        xalign 0.5                                   
-                        yalign 0.5
-                        if which_decision==1:
-                            text Rede1_Einstieg3
-                        elif which_decision==2:
-                            text Rede1_Reaktion3
-                        elif which_decision==3:
-                            text Rede1_Hinfuehrung3
-                        elif which_decision==4:
-                            text Rede1_Problem3
-                        elif which_decision==5:
-                            text Rede1_Erkenntnis3
-                        else:
-                            text Rede1_Aufruf3
+            imagebutton:
+                idle "UI/Choice3_idle.png"
+                hover "UI/Choice3_hover.png"
+                focus_mask True 
+
                 action[
                     Function(Decisions.__setitem__,which_decision - 1, 3),
                     SetVariable("Aggression", Aggression-1),
                     SetVariable("Which_decision", which_decision+1),
                     Jump("Decision_stage_"+str(which_decision))
                 ]
-        else:
             frame:
                 background None
                 xpos 200
-                ypos 700
+                ypos 800
+                vbox:                                                                                  
+                    xalign 0.5                                   
+                    yalign 0.5
+                    xsize 550
+                    if which_decision==1:
+                        text Rede1_Einstieg3
+                    elif which_decision==2:
+                        text Rede1_Reaktion3
+                    elif which_decision==3:
+                        text Rede1_Hinfuehrung3
+                    elif which_decision==4:
+                        text Rede1_Problem3
+                    elif which_decision==5:
+                        text Rede1_Erkenntnis3
+                    else:
+                        text Rede1_Aufruf3
+        else:
+            frame:
+                background None
+                add "UI/Choice3_idle.png":
+                    alpha 0.5    
+                    xalign 0.5
+                    yalign 0.5
                 frame:
                     background None
-                    xpadding 15               
-                    ypadding 15     
-                    add "UI/paper.png":
-                        alpha 0.5    
-                        xsize Box_option_image_width
-                        ysize Box_option_image_height
-                        xalign 0.5
-                        yalign 0.5
-                    xsize Box_option_width
-                    ysize Box_option_height  
+                    xpos 200
+                    ypos 800
                     vbox:                                                                                  
                         xalign 0.5                                   
                         yalign 0.5
+                        xsize 550
                         if which_decision==1:
-                            text Rede1_Einstieg2
+                            text Rede1_Einstieg3:
+                                color "#8b8a73"
                         elif which_decision==2:
-                            text Rede1_Reaktion2
+                            text Rede1_Reaktion3:
+                                color "#8b8a73"
                         elif which_decision==3:
-                            text Rede1_Hinfuehrung2
+                            text Rede1_Hinfuehrung3:
+                                color "#8b8a73"
                         elif which_decision==4:
-                            text Rede1_Problem2
+                            text Rede1_Problem3:
+                                color "#8b8a73"
                         elif which_decision==5:
-                            text Rede1_Erkenntnis2
+                            text Rede1_Erkenntnis3:
+                                color "#8b8a73"
                         else:
-                            text Rede1_Aufruf2
+                            text Rede1_Aufruf3:
+                                color "#8b8a73"
             
+#########################################################################################################
+
         if which_decision<=2 or Aggression<4:
-            button:                                                                                                      #beschwichtigend
-                xpos 800
-                ypos 700
-                frame:
-                    background None
-                    xpadding 15                                                                 
-                    ypadding 15                                                                 
-                    add "UI/paper.png":
-                        xsize Box_option_image_width
-                        ysize Box_option_image_height
-                        xalign 0.5
-                        yalign 0.5
-                    xsize Box_option_width
-                    ysize Box_option_height                                                  
-                    vbox:                                                                                                                         
-                        xalign 0.5                                                                  
-                        yalign 0.5
-                        if which_decision==1:
-                            text Rede1_Einstieg4
-                        elif which_decision==2:
-                            text Rede1_Reaktion4
-                        elif which_decision==3:
-                            text Rede1_Hinfuehrung4
-                        elif which_decision==4:
-                            text Rede1_Problem4
-                        elif which_decision==5:
-                            text Rede1_Erkenntnis4
-                        else:
-                            text Rede1_Aufruf4
+            imagebutton:
+                idle "UI/Choice4_idle.png"
+                hover "UI/Choice4_hover.png"
+                focus_mask True 
                 action[
                     Function(Decisions.__setitem__,which_decision - 1, 4),
                     SetVariable("Aggression", Aggression-2),
                     SetVariable("Which_decision", which_decision+1),
                     Jump("Decision_stage_"+str(which_decision))
                 ]
+            frame:
+                background None
+                xpos 900
+                ypos 800
+                vbox:                                                                                  
+                    xalign 0.5                                   
+                    yalign 0.5
+                    xsize 550
+                    if which_decision==1:
+                        text Rede1_Einstieg4
+                    elif which_decision==2:
+                        text Rede1_Reaktion4
+                    elif which_decision==3:
+                        text Rede1_Hinfuehrung4
+                    elif which_decision==4:
+                        text Rede1_Problem4
+                    elif which_decision==5:
+                        text Rede1_Erkenntnis4
+                    else:
+                        text Rede1_Aufruf4
         else:
             frame:
                 background None
-                xpos 800
-                ypos 700
+                add "UI/Choice4_idle.png":
+                    alpha 0.5    
+                    xalign 0.5
+                    yalign 0.5
                 frame:
                     background None
-                    xpadding 15               
-                    ypadding 15     
-                    add "UI/paper.png":
-                        alpha 0.5    
-                        xsize Box_option_image_width
-                        ysize Box_option_image_height
-                        xalign 0.5
-                        yalign 0.5
-                    xsize Box_option_width
-                    ysize Box_option_height  
+                    xpos 900
+                    ypos 800
                     vbox:                                                                                  
                         xalign 0.5                                   
                         yalign 0.5
+                        xsize 550
                         if which_decision==1:
-                            text Rede1_Einstieg2
+                            text Rede1_Einstieg4:
+                                color "#8b8a73"
                         elif which_decision==2:
-                            text Rede1_Reaktion2
+                            text Rede1_Reaktion4:
+                                color "#8b8a73"
                         elif which_decision==3:
-                            text Rede1_Hinfuehrung2
+                            text Rede1_Hinfuehrung4:
+                                color "#8b8a73"
                         elif which_decision==4:
-                            text Rede1_Problem2
+                            text Rede1_Problem4:
+                                color "#8b8a73"
                         elif which_decision==5:
-                            text Rede1_Erkenntnis2
+                            text Rede1_Erkenntnis4:
+                                color "#8b8a73"
                         else:
-                            text Rede1_Aufruf2
+                            text Rede1_Aufruf4:
+                                color "#8b8a73"
+
+
+    frame:
+        background None
+        xalign 0.5
+        yalign 0.5               
+        add "UI/Audience_Front.png":
+            xsize 2560
+            ysize 1440
 
 
 
