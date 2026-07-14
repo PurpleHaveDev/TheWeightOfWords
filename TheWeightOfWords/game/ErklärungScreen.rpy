@@ -66,7 +66,7 @@ screen ErklärungScreen:
 
         vbox:
             xpos 300
-            ypos 1000
+            ypos 975
             xsize 500
             text "[Auswirkung[0]]":
                 size 30

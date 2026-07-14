@@ -31,11 +31,6 @@ screen Rede_Menu_Style:
         background None
         xpos 1730
         ypos 100
-        #add "UI/paper.png":
-        #        xsize 1500
-        #        ysize 1900
-        #        xalign 0.5
-        #        yalign 0.5
         vbox:
             xsize 700
             text"[Speech[0]]"
@@ -93,12 +88,12 @@ screen Rede_Menu_Style:
                 ]
             frame:
                 background None
-                xpos 900
+                xpos 930
                 ypos 220
                 vbox:                                                                                  
                     xalign 0.5                                   
                     yalign 0.5
-                    xsize 550
+                    xsize 500
                     if which_decision==1:
                         text Rede1_Einstieg2
                     elif which_decision==2:
@@ -120,12 +115,12 @@ screen Rede_Menu_Style:
                     yalign 0.5
                 frame:
                     background None
-                    xpos 900
+                    xpos 930
                     ypos 220
                     vbox:                                                                                  
                         xalign 0.5                                   
                         yalign 0.5
-                        xsize 550
+                        xsize 500
                         if which_decision==1:
                             text Rede1_Einstieg2:
                                 color "#8b8a73"
@@ -166,7 +161,7 @@ screen Rede_Menu_Style:
                 vbox:                                                                                  
                     xalign 0.5                                   
                     yalign 0.5
-                    xsize 550
+                    xsize 500
                     if which_decision==1:
                         text Rede1_Einstieg1
                     elif which_decision==2:
@@ -194,7 +189,7 @@ screen Rede_Menu_Style:
                     vbox:                                                                                  
                         xalign 0.5                                   
                         yalign 0.5
-                        xsize 550
+                        xsize 500
                         if which_decision==1:
                             text Rede1_Einstieg1:
                                 color "#8b8a73"
@@ -235,7 +230,7 @@ screen Rede_Menu_Style:
                 vbox:                                                                                  
                     xalign 0.5                                   
                     yalign 0.5
-                    xsize 550
+                    xsize 500
                     if which_decision==1:
                         text Rede1_Einstieg3
                     elif which_decision==2:
@@ -262,7 +257,7 @@ screen Rede_Menu_Style:
                     vbox:                                                                                  
                         xalign 0.5                                   
                         yalign 0.5
-                        xsize 550
+                        xsize 500
                         if which_decision==1:
                             text Rede1_Einstieg3:
                                 color "#8b8a73"
@@ -297,12 +292,12 @@ screen Rede_Menu_Style:
                 ]
             frame:
                 background None
-                xpos 900
+                xpos 930
                 ypos 800
                 vbox:                                                                                  
                     xalign 0.5                                   
                     yalign 0.5
-                    xsize 550
+                    xsize 500
                     if which_decision==1:
                         text Rede1_Einstieg4
                     elif which_decision==2:
@@ -324,12 +319,12 @@ screen Rede_Menu_Style:
                     yalign 0.5
                 frame:
                     background None
-                    xpos 900
+                    xpos 930
                     ypos 800
                     vbox:                                                                                  
                         xalign 0.5                                   
                         yalign 0.5
-                        xsize 550
+                        xsize 500
                         if which_decision==1:
                             text Rede1_Einstieg4:
                                 color "#8b8a73"
@@ -363,3 +358,126 @@ screen Rede_Menu_Style:
 style Decision_UI_text:
     size 20
     color"#524e44" 
+
+
+########################################################################################################
+
+label Audience_Reaction:
+    call screen Publikum
+
+
+screen Publikum:
+    style_prefix "Audience"
+
+
+    frame:
+        background None
+        xalign 0.5
+        yalign 0.5               
+        add "UI/Speech_bg.png":
+            xsize 2560
+            ysize 1440
+
+    frame:
+        background None
+        xpos 1730
+        ypos 100
+        vbox:
+            xsize 700
+            text"[Speech[0]]"
+            text"[Speech[1]]"
+            text"[Speech[2]]"
+            text"[Speech[3]]"
+            text"[Speech[4]]"
+            text"[Speech[5]]"
+
+    frame:
+        background None
+        xalign 0.5
+        yalign 0.5               
+        add "UI/Audience_Back.png":
+            xsize 2560
+            ysize 1440
+            xanchor 1
+            xzoom -1
+
+    frame:
+        background None
+        xalign 0.5
+        yalign 0.5               
+        add "UI/Audience_Front.png":
+            xsize 2560
+            ysize 1440
+
+    button:
+        xpos 500
+        ypos 1300
+        frame:
+            xalign 0.5
+            yalign 0.5
+            vbox:
+                text "Weiter >>>"
+        action(
+            SetVariable ("Page",1),
+            Jump ("Decision")
+        )
+        
+    if which_decision==2:
+        frame:
+            xpos 50
+            ypos 1100
+            vbox:
+                xalign .5
+                yalign .5
+                xsize 1500
+                text Publikum[0]
+
+    elif which_decision==3:
+        frame:
+            xpos 50
+            ypos 1100
+            vbox:
+                xalign .5
+                yalign .5
+                xsize 1500
+                text Publikum[1]
+
+    elif which_decision==4:
+        frame:
+            xpos 50
+            ypos 1100
+            vbox:
+                xalign .5
+                yalign .5
+                xsize 1500
+                text Publikum[2]
+
+    elif which_decision==5:
+        frame:
+            xpos 50
+            ypos 1100
+            vbox:
+                xalign .5
+                yalign .5
+                xsize 1500
+                text Publikum[3]
+
+    elif which_decision==6:
+        frame:
+            xpos 50
+            ypos 1100
+            vbox:
+                xalign .5
+                yalign .5
+                xsize 1500
+                text Publikum[4]
+
+    else:
+        frame:
+            xpos 50
+            ypos 1100
+            vbox:
+                xalign .5
+                yalign .5
+                xsize 1500
+                text Publikum[5]
