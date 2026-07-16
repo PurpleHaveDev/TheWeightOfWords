@@ -8,16 +8,16 @@ label Szenario1:
 
 
         if BriefingErfolgt == False:
-            AD "Frau Präsidentin! Die Leute erwaren Ihre Meinung. Sind sie sicher, Sie sind vorbereitet?"
-            AD "Falls nicht, haben Sie alles Wichtige zum aktuellen Vorfall hier vorliegen."
+            NA "Du bist Präsidentin eines Landes, das gar nicht so anders ist als unseres. Eine Krise erschüttert das Land, und du musst eine Rede halten, die zeigt, wohin es jetzt geht."
+            NA "Bevor du auf die Bühne trittst, bekommst du noch ein paar Informationen: aus der Presse, aus den sozialen Medien und von den Geheimdiensten."
+            NA "Lies sie dir in Ruhe durch, danach liegt es an dir, die richtigen Entscheidungen zu treffen."
             $BriefingErfolgt = True
         else:
             pass
         call screen Scenario1_Intro                                                                        #Hier ist das setup des szenarios in Form eines Zeitzungsartikels
 
         label Tutorial:
-            NA "Du musst jetzt eine Rede halten."                                                                   #Anleitung zum kommenden Gameplay
-            NA "Wähle Bausteine der Rede aus um deine Zuhörer in eine bestimmte Richtung zu lenken."
+            NA "Jetzt kommt es auf dich an. Wähle die Bausteine für deine Rede aus, die du für richtig hältst."                                                                   #Anleitung zum kommenden Gameplay
 
         label Decision:
             $Box_option_height = 600
@@ -200,13 +200,7 @@ label Szenario1:
 
                 else:
                     pass
-            jump Audience_Reaction
-
-                                                                        # Als nächstes muss unbedingt ein Variablen Array erstellt werden, das trackt, welche Option gewählt wurde. 
-                                                                        # Fragen zu Klären: Wie viele Varianten von Auswirkungen -"Enden"- soll es geben?
-                                                                        # Wie soll die immediate Reaktion der audience aussehen?
-                                                                        # Wie soll dir finale form der Auswirkungen aussehen? png's, animationen, Text?
-                                                                        # Wie können wir den Punkt Hass und Manipulation noch härter heimhämern?                                                               
+            jump Audience_Reaction                                                        
 
         label Decision_stage_7:                     
             if Aggression >= 7:

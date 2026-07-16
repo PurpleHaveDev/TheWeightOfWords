@@ -401,7 +401,7 @@ screen Rede_Menu_Style:
             ypos 1250
             xanchor .5
             hbox:
-                text "{size=*2}{color=#f1f0be}Nachfolgen"
+                text "{size=*2}{color=#f1f0be}Viele Jahre später ..."
                 xalign .5
                 yalign .5
             action[
@@ -441,12 +441,12 @@ screen Publikum:
         ypos 100
         vbox:
             xsize 700
-            text"[Speech[0]]"
-            text"[Speech[1]]"
-            text"[Speech[2]]"
-            text"[Speech[3]]"
-            text"[Speech[4]]"
-            text"[Speech[5]]"
+            text"{color=#181817}{size=*0.48}[Speech[0]]"
+            text"{color=#181817}{size=*0.48}[Speech[1]]"
+            text"{color=#181817}{size=*0.48}[Speech[2]]"
+            text"{color=#181817}{size=*0.48}[Speech[3]]"
+            text"{color=#181817}{size=*0.48}[Speech[4]]"
+            text"{color=#181817}{size=*0.48}[Speech[5]]"
 
     frame:
         background None

@@ -82,11 +82,11 @@ screen Ending_1o3_Diplomatic:
             xpos 1550
             ypos 180
             xsize 800
-            text "{size=*1}{color=#000}Die gesellschaftliche Spaltung, die die Täter beabsichtigt hatten, blieb aus. Das Land rang öffentlich um den richtigen Umgang mit Trauer, Sicherheit und Zusammenhalt – "
-            text "{size=*1}{color=#000}in Parlamentsdebatten, in Zeitungen, im Alltag an der Kaffeemaschine. Dieser Streit verlangsamte Entscheidungen."
-            text "{size=*1}{color=#000}Er hielt das Land aber auch zusammen. Aus oppositionellen Kreisen wurde der Präsidentin nach ihrer Rede immer wieder Schwäche vorgehalten."
-            text "{size=*1}{color=#000}Diese Gruppe blieb in der Minderheit – bestimmte aber lautstark die Debatten."
-            text "{size=*1}{color=#000}Die Rede vom Siegesplatz gilt als Ausgangspunkt für den zähen, manchmal lähmenden, aber letztlich tragfähigen Weg, den das Land nach dem Anschlag ging."
+            text "{size=*0.9}{color=#000}Die gesellschaftliche Spaltung, die die Täter beabsichtigt hatten, blieb aus. Das Land rang öffentlich um den richtigen Umgang mit Trauer, Sicherheit und Zusammenhalt – "
+            text "{size=*0.9}{color=#000}in Parlamentsdebatten, in Zeitungen, im Alltag an der Kaffeemaschine. Dieser Streit verlangsamte Entscheidungen."
+            text "{size=*0.9}{color=#000}Er hielt das Land aber auch zusammen. Aus oppositionellen Kreisen wurde der Präsidentin nach ihrer Rede immer wieder Schwäche vorgehalten."
+            text "{size=*0.9}{color=#000}Diese Gruppe blieb in der Minderheit – bestimmte aber lautstark die Debatten."
+            text "{size=*0.9}{color=#000}Die Rede vom Siegesplatz gilt als Ausgangspunkt für den zähen, manchmal lähmenden, aber letztlich tragfähigen Weg, den das Land nach dem Anschlag ging."
 
     button:
         xpos 500
