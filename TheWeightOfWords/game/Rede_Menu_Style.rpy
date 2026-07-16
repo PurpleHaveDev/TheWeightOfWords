@@ -10,10 +10,10 @@ screen Rede_Menu_Style:
             xsize 2560
             ysize 1440
 
-#    frame:
-#        xpos 700
-#        ypos 10
-#        text "[which_decision]"
+    frame:
+        xpos 700
+        ypos 10
+        text "[which_decision]"
 #
 #    frame:
 #        xpos 800
@@ -54,18 +54,22 @@ screen Rede_Menu_Style:
 
 
     if which_decision>=7:
-        button:
-            xsize 500
-            ysize 120
-            xpos 500
-            ypos 500
-            vbox:
-                yalign 0.5
-                xalign 0.5
-                text"Aftermath"
-            action[
-                Jump("Decision_stage_"+str(which_decision))
-                ]
+        pass
+    #    button:
+    #        add Solid("#000")
+    #        xsize 600
+    #        ysize 100
+    #        xpos 800
+    #        ypos 1250
+    #        xanchor .5
+    #        hbox:
+    #            text "Nachfolgen"
+    #            xalign .5
+    #            yalign .5
+#
+    #        action[
+    #            Jump("Decision_stage_"+str(which_decision))
+    #            ]
 
 
 
@@ -73,6 +77,7 @@ screen Rede_Menu_Style:
 ###########################################################################################
 
     else:     
+
         if which_decision<=2 or Aggression>-4:
      
             imagebutton:
@@ -86,10 +91,12 @@ screen Rede_Menu_Style:
                     SetVariable("Which_decision", which_decision+1),
                     Jump("Decision_stage_"+str(which_decision))
                 ]
+            
+
             frame:
                 background None
                 xpos 930
-                ypos 220
+                ypos 270
                 vbox:                                                                                  
                     xalign 0.5                                   
                     yalign 0.5
@@ -116,7 +123,7 @@ screen Rede_Menu_Style:
                 frame:
                     background None
                     xpos 930
-                    ypos 220
+                    ypos 270
                     vbox:                                                                                  
                         xalign 0.5                                   
                         yalign 0.5
@@ -157,7 +164,7 @@ screen Rede_Menu_Style:
             frame:
                 background None
                 xpos 200
-                ypos 220
+                ypos 270
                 vbox:                                                                                  
                     xalign 0.5                                   
                     yalign 0.5
@@ -185,7 +192,7 @@ screen Rede_Menu_Style:
                 frame:
                     background None
                     xpos 200
-                    ypos 220
+                    ypos 270
                     vbox:                                                                                  
                         xalign 0.5                                   
                         yalign 0.5
@@ -226,7 +233,7 @@ screen Rede_Menu_Style:
             frame:
                 background None
                 xpos 200
-                ypos 800
+                ypos 850
                 vbox:                                                                                  
                     xalign 0.5                                   
                     yalign 0.5
@@ -253,7 +260,7 @@ screen Rede_Menu_Style:
                 frame:
                     background None
                     xpos 200
-                    ypos 800
+                    ypos 850
                     vbox:                                                                                  
                         xalign 0.5                                   
                         yalign 0.5
@@ -293,7 +300,7 @@ screen Rede_Menu_Style:
             frame:
                 background None
                 xpos 930
-                ypos 800
+                ypos 850
                 vbox:                                                                                  
                     xalign 0.5                                   
                     yalign 0.5
@@ -320,7 +327,7 @@ screen Rede_Menu_Style:
                 frame:
                     background None
                     xpos 930
-                    ypos 800
+                    ypos 850
                     vbox:                                                                                  
                         xalign 0.5                                   
                         yalign 0.5
@@ -352,6 +359,56 @@ screen Rede_Menu_Style:
         add "UI/Audience_Front.png":
             xsize 2560
             ysize 1440
+    
+    frame:
+        add Solid("#000")
+        xsize 1100
+        ysize 100
+        xpos 800
+        ypos 1250
+        xanchor .5
+        hbox:
+            xalign .5
+            yalign .5
+            if which_decision==1:
+                text Rede1_Frage1:
+                    color "#f1f0be"
+            elif which_decision==2:
+                text Rede1_Frage2:
+                    color "#f1f0be"
+            elif which_decision==3:
+                text Rede1_Frage3:
+                    color "#f1f0be"
+            elif which_decision==4:
+                text Rede1_Frage4:
+                    color "#f1f0be"
+            elif which_decision==5:
+                text Rede1_Frage5:
+                    color "#f1f0be"
+            elif which_decision==6:
+                text Rede1_Frage6:
+                    color "#f1f0be"
+            else:
+                pass
+
+
+    if which_decision == 7:
+        button:
+            add Solid("#000")
+            xsize 1100
+            ysize 100
+            xpos 800
+            ypos 1250
+            xanchor .5
+            hbox:
+                text "{size=*2}{color=#f1f0be}Nachfolgen"
+                xalign .5
+                yalign .5
+            action[
+                Jump("Decision_stage_"+str(which_decision))
+                ]
+
+
 
 
 
@@ -416,7 +473,7 @@ screen Publikum:
             xalign 0.5
             yalign 0.5
             vbox:
-                text "Weiter >>>"
+                text "{color=#f1f0be}Weiter >>>"
         action(
             SetVariable ("Page",1),
             Jump ("Decision")

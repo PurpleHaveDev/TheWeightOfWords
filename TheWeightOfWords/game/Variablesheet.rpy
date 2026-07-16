@@ -14,10 +14,11 @@ default Y_Phonescroll = "Handyhöhe"
 default Y_Datascroll = "Aktenhöhe"
 
 default Page = 1
+default BriefingErfolgt = False
 
 default English = False
 default Character_1=""
-default Character_2="NEWSPAPER"
+default Character_2="Berater"
 default Character_3="Publikum"
 default Lautstaerke = 0.5
 default Szenario = 1 
@@ -74,36 +75,36 @@ default Rede1_Aufruf2 = "Wir ziehen in den Krieg! Greift zu den Waffen! Schon je
 default Rede1_Aufruf3 = "Und so sage ich heute zu Ihnen: Reichen Sie sich die Hände. Helfen Sie Ihren Nächsten. Sprechen Sie. Streiten Sie. Aber bleiben Sie, bleiben wir zusammen, denn wir schaffen das. Das ist der Weg dieses wundervollen Landes. Ein gemeinsamer Weg. Wir lassen uns nicht spalten."
 default Rede1_Aufruf4 = "Und deswegen sage ich Ihnen, gehen Sie weiter Ihrer Wege. Bringen Sie Ihre Kinder in die Schule. Treffen Sie sich mit Freunden. Gehen Sie raus. Haben Sie Vertrauen in unsere Institutionen. Es wird noch lange dauern, bis wir mehr wissen. Der erste Feind ist das Misstrauen in unserer Mitte."
 ###########################################################################################################################
-default Rede1_Lehre1_1 = "Der Befehl »Greift zu den Waffen« ruft direkt zum Krieg auf. Die Opferzahl wird benutzt, um Vergeltung zu begründen. Statt Argumenten gibt es nur noch den Aufruf zur Folgschaft."
-default Rede1_Lehre1_2 = "Drei klare Schritte werden versprochen: Täter finden, verfolgen, vor Gericht stellen. Die Rednerin macht das Versprechen persönlich (»das werde ich«)."
-default Rede1_Lehre1_3 = "Kurze Aufforderungen folgen schnell hintereinander: Das Wort »zusammen« zieht sich durch die ganze Rede. Das Land wird gelobt, das zeigt echte Liebe."
-default Rede1_Lehre1_4 = "Am Ende wird nicht mehr die Tat, sondern das Misstrauen zum eigentlichen Problem gemacht. Die Rednerin verspricht nichts außer »weiter so«."
+default Rede1_Lehre1_1 = "Die Anrede »mein Volk« holt die Zuhörer nah an die Rednerin. Die Wortwahl ist übertrieben und soll Gefühle wecken. Die Fragen legen den Zuhörern schon eine Antwort in den Mund."
+default Rede1_Lehre1_2 = "Die Rednerin spricht alle direkt an. So entsteht ein Wir-Gefühl. Sie redet die Tat nicht klein, sondern kommt so »ehrlich« rüber."
+default Rede1_Lehre1_3 = "{size=*0.9}Liebe Menschen hier auf dem Platz, liebe Zuhörerinnen und Zuhörer da draußen, wir sind Opfer eines Anschlages geworden, aber wir lassen uns nicht unterkriegen. Wir stehen hier heute gemeinsam. Wir zusammen entscheiden, welchen Weg unser Land gehen wird."
+default Rede1_Lehre1_4 = "Die Rednerin legt sich nicht fest. Sie spricht vorsichtig und förmlich. Das schafft Abstand statt Nähe."
 
-default Rede1_Lehre2_1 = "Der Ort der Rede wird direkt angesprochen, das verstärkt die Wirkung. Das Wort »zurückschlagen« bedeutet: Gewalt mit Gewalt beantworten. »Bis aufs Blut kämpfen« fordert Opferbereitschaft."
-default Rede1_Lehre2_2 = "Freiheit wird als wichtigstes Gut festgelegt. Daraus wird die weitere Argumentation abgeleitet. Die Bürger sollen selbst aktiv werden."
-default Rede1_Lehre2_3 = "Positiv Handelnde wie Sanitäter werden als Vorbilder stilisiert. Der Satz »diese Tat definiert uns nicht« trennt die Gemeinschaft bewusst von der Tat."
-default Rede1_Lehre2_4 = "Der Satz »es gibt keine einfachen Antworten« klingt schlau, sagt aber nichts Konkretes. Am Ende wird zur Rückkehr in den Alltag aufgerufen. Es gibt keine Veränderung."
+default Rede1_Lehre2_1 = "Das Land wird wie ein Körper beschrieben, der leidet. Bilder von weinenden Müttern und Vätern wecken starke Gefühle. Es wird eine Antwort impliziert ohne sie direkt zu nennen."
+default Rede1_Lehre2_2 = "Die Opfer werden genau benannt: Familien, Frauen, Kinder. Das macht betroffen. Gleich danach folgt ein Versprechen zum Handeln."
+default Rede1_Lehre2_3 = "Die Opferzahl wird mehrfach genannt. Die Beispiele schaffen emotionale Nähe und machen die Zahl greifbar."
+default Rede1_Lehre2_4 = "Erst wird Mitgefühl gezeigt, dann sofort gebremst. Es wird viel versprochen, aber nichts Konkretes angekündigt."
 
-default Rede1_Lehre3_1 = "Frühere Politik wird mit einem abwertenden Wort beschrieben. Freundlichkeit wird plötzlich als Fehler dargestellt. Das Motiv vom Verrat wird weiter bedient."
-default Rede1_Lehre3_2 = "Begriffe wie Netzwerke und Mittäter lassen die Rednerin wissend wirken. Selbstkritik macht sie nahbar und zeigt echten Veränderungswillen."
-default Rede1_Lehre3_3 = "Die Frage »wer gehört dazu« wird als Werkzeug der Täter entlarvt. Diskutieren wird ausdrücklich von Spalten unterschieden."
-default Rede1_Lehre3_4 = "Nicht die Tat wird als Problem gesehen, sondern die mögliche Reaktion darauf. Es wird so getan, als gäbe es nur zwei Möglichkeiten: übertriebene Kontrolle oder Zurückhaltung."
+default Rede1_Lehre3_1 = "Es wird ein klares Feindbild aufgebaut: »wir« gegen »die im Ausland«. Das Bild vom Dolch im Rücken bedeutet Verrat. Das Wort »Parasit« entmenschlicht. Die Sprache bedient gewalttätiges Kopfkino."
+default Rede1_Lehre3_2 = "Die Rednerin stellt sich selbst kritische Fragen. Das wirkt ehrlich. Danach kündigt sie an, etwas zu ändern."
+default Rede1_Lehre3_3 = "Die Rednerin will vor die Welle der Entwicklung kommen. Sie sagt offen, wss  die Absicht der Täter war. Damit will sie diesen Ablauf stoppen."
+default Rede1_Lehre3_4 = "Es wird angedeutet, dass es eine Vorgeschichte gibt, ohne sie zu nennen. Die Schuld wird auf alle verteilt."
 
-default Rede1_Lehre4_1 = "Es wird ein klares Feindbild aufgebaut: »wir« gegen »die im Ausland«. Das Bild vom Dolch im Rücken bedeutet Verrat. Das Wort »Parasit« entmenschlicht. Die Sprache bedient gewalttätiges Kopfkino."
-default Rede1_Lehre4_2 = "Die Rednerin stellt sich selbst kritische Fragen. Das wirkt ehrlich. Danach kündigt sie an, etwas zu ändern."
-default Rede1_Lehre4_3 = "Die Rednerin will vor die Welle der Entwicklung kommen. Sie sagt offen, wss  die Absicht der Täter war. Damit will sie diesen Ablauf stoppen."
-default Rede1_Lehre4_4 = "Es wird angedeutet, dass es eine Vorgeschichte gibt, ohne sie zu nennen. Die Schuld wird auf alle verteilt."
+default Rede1_Lehre4_1 = "Frühere Politik wird mit einem abwertenden Wort beschrieben. Freundlichkeit wird plötzlich als Fehler dargestellt. Das Motiv vom Verrat wird weiter bedient."
+default Rede1_Lehre4_2 = "Begriffe wie Netzwerke und Mittäter lassen die Rednerin wissend wirken. Selbstkritik macht sie nahbar und zeigt echten Veränderungswillen."
+default Rede1_Lehre4_3 = "Die Frage »wer gehört dazu« wird als Werkzeug der Täter entlarvt. Diskutieren wird ausdrücklich von Spalten unterschieden."
+default Rede1_Lehre4_4 = "Nicht die Tat wird als Problem gesehen, sondern die mögliche Reaktion darauf. Es wird so getan, als gäbe es nur zwei Möglichkeiten: übertriebene Kontrolle oder Zurückhaltung."
 
-default Rede1_Lehre5_1 = "Das Land wird wie ein Körper beschrieben, der leidet. Bilder von weinenden Müttern und Vätern wecken starke Gefühle. Es wird eine Antwort impliziert ohne sie direkt zu nennen."
-default Rede1_Lehre5_2 = "Die Opfer werden genau benannt: Familien, Frauen, Kinder. Das macht betroffen. Gleich danach folgt ein Versprechen zum Handeln."
-default Rede1_Lehre5_3 = "Die Opferzahl wird mehrfach genannt. Die Beispiele schaffen emotionale Nähe und machen die Zahl greifbar."
-default Rede1_Lehre5_4 = "Erst wird Mitgefühl gezeigt, dann sofort gebremst. Es wird viel versprochen, aber nichts Konkretes angekündigt."
+default Rede1_Lehre5_1 = "Der Ort der Rede wird direkt angesprochen, das verstärkt die Wirkung. Das Wort »zurückschlagen« bedeutet: Gewalt mit Gewalt beantworten. »Bis aufs Blut kämpfen« fordert Opferbereitschaft."
+default Rede1_Lehre5_2 = "Freiheit wird als wichtigstes Gut festgelegt. Daraus wird die weitere Argumentation abgeleitet. Die Bürger sollen selbst aktiv werden."
+default Rede1_Lehre5_3 = "Positiv Handelnde wie Sanitäter werden als Vorbilder stilisiert. Der Satz »diese Tat definiert uns nicht« trennt die Gemeinschaft bewusst von der Tat."
+default Rede1_Lehre5_4 = "Der Satz »es gibt keine einfachen Antworten« klingt schlau, sagt aber nichts Konkretes. Am Ende wird zur Rückkehr in den Alltag aufgerufen. Es gibt keine Veränderung."
 
-default Rede1_Lehre6_1 = "Die Anrede »mein Volk« holt die Zuhörer nah an die Rednerin. Die Wortwahl ist übertrieben und soll Gefühle wecken. Die Fragen legen den Zuhörern schon eine Antwort in den Mund."
-default Rede1_Lehre6_2 = "Die Rednerin spricht alle direkt an. So entsteht ein Wir-Gefühl. Sie redet die Tat nicht klein, sondern kommt so »ehrlich« rüber."
-default Rede1_Lehre6_3 = "Liebe Menschen hier auf dem Platz, liebe Zuhörerinnen und Zuhörer da draußen, wir sind Opfer eines Anschlages geworden, aber wir lassen uns nicht unterkriegen. Wir stehen hier heute gemeinsam. Wir zusammen entscheiden, welchen Weg unser Land gehen wird."
-default Rede1_Lehre6_4 = "Die Rednerin legt sich nicht fest. Sie spricht vorsichtig und förmlich. Das schafft Abstand statt Nähe."
-###################################################################################################################################
+default Rede1_Lehre6_1 = "Der Befehl »Greift zu den Waffen« ruft direkt zum Krieg auf. Die Opferzahl wird benutzt, um Vergeltung zu begründen. Statt Argumenten gibt es nur noch den Aufruf zur Folgschaft."
+default Rede1_Lehre6_2 = "Drei klare Schritte werden versprochen: Täter finden, verfolgen, vor Gericht stellen. Die Rednerin macht das Versprechen persönlich (»das werde ich«)."
+default Rede1_Lehre6_3 = "Kurze Aufforderungen folgen schnell hintereinander: Das Wort »zusammen« zieht sich durch die ganze Rede. Das Land wird gelobt, das zeigt echte Liebe."
+default Rede1_Lehre6_4 = "Am Ende wird nicht mehr die Tat, sondern das Misstrauen zum eigentlichen Problem gemacht. Die Rednerin verspricht nichts außer »weiter so«."
+##################################################################################################################################
 default Rede1_Publikum1_1 = "Manche wirken betroffen von den Fragen, andere murmeln zustimmend."
 default Rede1_Publikum1_2 = "Ein paar Köpfe im Publikum nicken zustimmend, dazu vereinzeltes Klatschen."
 default Rede1_Publikum1_3 = "Beifall setzt ein, mehrere Zuhörer lächeln sich zu."
@@ -133,6 +134,16 @@ default Rede1_Publikum6_1 = "Der Applaus reißt nicht ab. Mehrere im Saal johlen
 default Rede1_Publikum6_2 = "Die Menge steht auf und applaudiert lange."
 default Rede1_Publikum6_3 = "Ausdauernder Beifall, Zuhörer reichen sich die Hände."
 default Rede1_Publikum6_4 = "Nur wenige klatschen kurz, andere verlassen bereits ihre Plätze."
+###########################################################################################################################################
+default Rede1_Frage1 = "{size=*2}Wie wollen Sie die Rede einleiten?"
+default Rede1_Frage2 = "{size=*2}Wie schildern Sie die Reaktion?"
+default Rede1_Frage3 = "{size=*2}Wie wollen Sie zu Weiterem hinführen?"
+default Rede1_Frage4 = "{size=*2}Welches Problem stellt sich Ihrer Meinung nach dar?"
+default Rede1_Frage5 = "{size=*2}Welche Erkenntnis ziehen Sie daraus?"
+default Rede1_Frage6 = "{size=*2}Wozu wollen Sie aufrufen?"
+
+
+
 #Szenario2
 default Rede2_Einstieg1 = "OptionA"
 default Rede2_Einstieg2 = "OptionB"

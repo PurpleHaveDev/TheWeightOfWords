@@ -60,8 +60,9 @@ screen Scenario1_Intro:
             xalign 0.5
             yalign 0.5
             vbox:
-                text "Auf zur Rede"
+                text "{color=#f1f0be}Auf zur Rede"
         action(
+            SetVariable ("BriefingErfolgt", False),
             Jump ("Tutorial")
         )
 

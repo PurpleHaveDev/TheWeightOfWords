@@ -1,6 +1,6 @@
 #Ending Screens
 
-screen Ending_1_Aggresive:
+screen Ending_1o1_Aggresive:
     style_prefix "end1"
 
     frame:
@@ -26,7 +26,7 @@ screen Ending_1_Aggresive:
             xalign 0.5
             yalign 0.5
             vbox:
-                text "Weiter >>>"
+                text "{color=#f1f0be}Weiter >>>"
         action(
             SetVariable ("Page",1),
             Jump ("Erklärung")
@@ -34,7 +34,7 @@ screen Ending_1_Aggresive:
 
 
 
-screen Ending_2_Fiesty:
+screen Ending_1o2_Fiesty:
     style_prefix "end2"
 
     frame:
@@ -61,14 +61,14 @@ screen Ending_2_Fiesty:
             xalign 0.5
             yalign 0.5
             vbox:
-                text "Weiter >>>"
+                text "{color=#f1f0be}Weiter >>>"
         action(
             SetVariable ("Page",1),
             Jump ("Erklärung")
         )
 
 
-screen Ending_3_Diplomatic:
+screen Ending_1o3_Diplomatic:
     style_prefix "end3"
 
     frame:
@@ -95,7 +95,7 @@ screen Ending_3_Diplomatic:
             xalign 0.5
             yalign 0.5
             vbox:
-                text "Weiter >>>"
+                text "{color=#f1f0be}Weiter >>>"
         action(
             SetVariable ("Page",1),
             Jump ("Erklärung")
@@ -103,7 +103,7 @@ screen Ending_3_Diplomatic:
 
 
 
-screen Ending_4_Calming:
+screen Ending_1o4_Calming:
     style_prefix "end4"
 
     frame:
@@ -117,12 +117,12 @@ screen Ending_4_Calming:
             xpos 1550
             ypos 180
             xsize 800
-            text "{size=*0.85}{color=#000}In den Monaten nach dem Anschlag schoben die politischen Lager einander die Verantwortung zu. Eine klare Linie blieb aus. Die Präsidentin überstand ein Misstrauensvotum nicht."
-            text "{size=*0.85}{color=#000}Das Vertrauen in die Institutionen sank schleichend, aber stetig. Die Wirtschaft stagnierte. Drei Kabinette scheiterten in drei Jahren."
-            text "{size=*0.85}{color=#000}Seitdem wechselten Minderheitsregierungen einander ab. Kaum eine politische Kraft schafft es noch, das Land hinter sich zu vereinen."
-            text "{size=*0.85}{color=#000}Die fehlenden Konsequenzen nach dem ersten Anschlag hatten einen Preis: Zwei weitere Attentate erschütterten das Land keine fünf Jahre später."
-            text "{size=*0.85}{color=#000}Das Land rutschte in eine Phase der Unruhen und Ausschreitungen ab, aus der es bis heute nicht herausgefunden hat. Immer wieder aufflammende Bürgerkriege prägen Alltag und Politik."
-            text "{size=*0.85}{color=#000}Dass in der Rede auf dem Siegesplatz kein klarer Pfad eingeschlagen wurde, gilt unter Historikern heute als Ausgangspunkt für den Niedergang."
+            text "{size=*0.8}{color=#000}In den Monaten nach dem Anschlag schoben die politischen Lager einander die Verantwortung zu. Eine klare Linie blieb aus. Die Präsidentin überstand ein Misstrauensvotum nicht."
+            text "{size=*0.8}{color=#000}Das Vertrauen in die Institutionen sank schleichend, aber stetig. Die Wirtschaft stagnierte. Drei Kabinette scheiterten in drei Jahren."
+            text "{size=*0.8}{color=#000}Seitdem wechselten Minderheitsregierungen einander ab. Kaum eine politische Kraft schafft es noch, das Land hinter sich zu vereinen."
+            text "{size=*0.8}{color=#000}Die fehlenden Konsequenzen nach dem ersten Anschlag hatten einen Preis: Zwei weitere Attentate erschütterten das Land keine fünf Jahre später."
+            text "{size=*0.8}{color=#000}Das Land rutschte in eine Phase der Unruhen und Ausschreitungen ab, aus der es bis heute nicht herausgefunden hat. Immer wieder aufflammende Bürgerkriege prägen Alltag und Politik."
+            text "{size=*0.8}{color=#000}Dass in der Rede auf dem Siegesplatz kein klarer Pfad eingeschlagen wurde, gilt unter Historikern heute als Ausgangspunkt für den Niedergang."
 
     button:
         xpos 500
@@ -131,7 +131,7 @@ screen Ending_4_Calming:
             xalign 0.5
             yalign 0.5
             vbox:
-                text "Weiter >>>"
+                text "{color=#f1f0be}Weiter >>>"
         action(
             SetVariable ("Page",1),
             Jump ("Erklärung")

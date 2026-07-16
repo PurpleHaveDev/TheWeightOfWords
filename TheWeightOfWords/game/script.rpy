@@ -9,51 +9,7 @@ label start:
 
     if English==False:  
         call screen mainmenu                                        #Das Deutsche Menu 
-        #menu:
-        #    "Start":
-        #        jump Game_Start
-#
-        #    "Sprache":
-        #        "Waehle eine Sprache"
-        #        menu:
-        #            "Deutsch":
-        #                $English=False
-        #                jump start
-        #            "Englisch":
-        #                $English=True
-        #                jump start
-#
-        #    "Entwickler":
-        #        if English==False:
-        #            "Kuehle Menschen haben an diesem Spiel gearbeitet."
-        #            jump start
-        #        else:
-        #            "Cool people have worked on this game."
-        #            jump start
-#
-        #    "Lautstaerke":
-        #        label LautstaerkeDE:                              #Lautstaerke wird prozentual gerechnet, deswegen "0.0~" 
-        #            if English==False:
-        #                    menu:
-        #                        "Lauter":
-        #                            $Lautstaerke=Lautstaerke+0.05
-        #                            jump LautstaerkeDE
-        #                        "Leiser":
-        #                            $Lautstaerke=Lautstaerke-0.05
-        #                            jump LautstaerkeDE
-        #                        "Zurueck":
-        #                            jump start                      #Muss noch nen Weg finden, dass man hier nur ein menu zurueck geschickt wird/in ndem Menu bleibt
-        #                
-        #            else:
-        #                    menu:
-        #                        "Louder":
-        #                            $Lautstaerke=Lautstaerke+0.05
-        #                            jump LautstaerkeDE
-        #                        "Quieter":
-        #                            $Lautstaerke=Lautstaerke-0.05
-        #                            jump LautstaerkeDE
-        #                        "Back":
-        #                            jump start
+
     else: 
         menu:                                                      #Das Englische Menu
             "Start":
@@ -106,19 +62,6 @@ label Game_Start:
     if English==False:
         NA "DAS NARRATIV"
         call screen Szenarios
-        #menu:
-        #    "Szenario1":
-        #        $Szenario = 1
-        #        $Aggression = 0
-        #        $Decisions= [0,0,0,0,0,0]
-        #        jump Szenario1
-        #    "Szenario2":
-        #        $Szenario = 2
-        #        $Aggression = 0
-        #        $Decisions= [0,0,0,0,0,0]
-        #        pass #jump Szenario2
-        #    "Szenario3":
-        #        pass #jump Szenario3
 
     else:
         NA "THE NARRATIVE"

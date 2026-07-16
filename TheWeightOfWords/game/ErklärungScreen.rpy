@@ -32,7 +32,7 @@ screen ErklärungScreen:
                 xalign 0.5
                 yalign 0.5
                 vbox:
-                    text "Home"
+                    text "{color=#f1f0be}Home"
             action(
                 SetVariable("Auswirkung", ["","","","","",""]),
                 Jump ("start")
@@ -55,7 +55,7 @@ screen ErklärungScreen:
                 size 30
                 color "#000"
         vbox:
-            xpos 1750
+            xpos 1790
             ypos 200
             xsize 500
             text Speech[2]:
@@ -79,7 +79,7 @@ screen ErklärungScreen:
                 size 30
                 color "#000"
         vbox:
-            xpos 1750
+            xpos 1790
             ypos 1000
             xsize 500
             text "[Auswirkung[2]]":
@@ -114,7 +114,7 @@ screen ErklärungScreen:
                 size 30
                 color "#000"
         vbox:
-            xpos 1750
+            xpos 1790
             ypos 200
             xsize 500
             text Speech[5]:
@@ -138,7 +138,7 @@ screen ErklärungScreen:
                 size 30
                 color "#000"
         vbox:
-            xpos 1750
+            xpos 1790
             ypos 1000
             xsize 500
             text "[Auswirkung[5]]":
@@ -151,8 +151,9 @@ screen ErklärungScreen:
                 xalign 0.5
                 yalign 0.5
                 vbox:
-                    text "Home"
+                    text "{color=#f1f0be}Home"
             action(
                 SetVariable("Auswirkung", ["","","","","",""]),
                 Jump ("start")
-            ) 
+            )
+

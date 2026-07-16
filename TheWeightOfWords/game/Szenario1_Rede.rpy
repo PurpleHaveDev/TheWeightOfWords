@@ -5,10 +5,15 @@ label Szenario1:
         $Handyhöhe=0
         $Aktenhöhe=0
         $which_decision=1
-        call screen Scenario1_Intro                                                                        #Hier ist das setup des szenarios in Form eines Zeitzungsartikels
-        NW "(hier wäre jetzt ein Bild von der Zeitung, die den Anschlag beschreibt)"
-        NW "539 Tote bei Anschlag auf die Hauptstadt. Bevölkerung in Schockstarre. Regierung unter Druck."
 
+
+        if BriefingErfolgt == False:
+            AD "Frau Präsidentin! Die Leute erwaren Ihre Meinung. Sind sie sicher, Sie sind vorbereitet?"
+            AD "Falls nicht, haben Sie alles Wichtige zum aktuellen Vorfall hier vorliegen."
+            $BriefingErfolgt = True
+        else:
+            pass
+        call screen Scenario1_Intro                                                                        #Hier ist das setup des szenarios in Form eines Zeitzungsartikels
 
         label Tutorial:
             NA "Du musst jetzt eine Rede halten."                                                                   #Anleitung zum kommenden Gameplay
@@ -20,7 +25,6 @@ label Szenario1:
             $Box_option_image_width = 900
             $Box_option_image_height = 500
             $Decision1 = True
-    
             call screen Rede_Menu_Style
 
 
@@ -206,13 +210,13 @@ label Szenario1:
 
         label Decision_stage_7:                     
             if Aggression >= 7:
-                call screen Ending_1_Aggresive
+                call screen Ending_1o1_Aggresive
             elif Aggression >=1 and Aggression <=6:
-                call screen Ending_2_Fiesty
+                call screen Ending_1o2_Fiesty
             elif Aggression >=-6 and Aggression <=0:
-                call screen Ending_3_Diplomatic
+                call screen Ending_1o3_Diplomatic
             else:
-                call screen Ending_4_Calming
+                call screen Ending_1o4_Calming
 
 
 

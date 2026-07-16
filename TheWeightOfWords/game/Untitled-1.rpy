@@ -88,7 +88,7 @@ screen Szenarios:
             xsize 600
             text "{color=#000}Szenario 2: Die Nordbankkrise"
             text ""
-            text "{size=*0.8}{color=#000}Eine große Bank muss Insolvenz anmelden. Die Börsen stürzen ab, die Menschen haben Angst um ihr Geld und ihre Rücklagen. Du bist die Präsidentin und musst der Nation erklären, wie es jetzt weitergeht. Finde die richtigen Worte, Absatz für Absatz, und entscheide, wie du das Land durch die Krise führst."
+            text "{size=*0.8}{color=#000}Eine große Bank muss Insolvenz anmelden. Die Börsen stürzen ab, die Menschen haben Angst um ihr Geld und ihre Rücklagen. Du bist die Präsidentin und musst der Nation erklären, wie es jetzt weitergeht. Finde die richtigen Worte, Absatz für Absatz, und entscheide, wie du das Land durch die Krise führst. (Coming Soon)"
 
     imagebutton:  
         idle "UI/Sz3_idle.png"
@@ -100,6 +100,7 @@ screen Szenarios:
             SetVariable("Decisions",[0,0,0,0,0,0]),
             NullAction()
         ]
+
 
 $Szenario = 1
 $Aggression = 0
