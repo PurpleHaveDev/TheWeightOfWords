@@ -19,6 +19,19 @@ screen Ending_1o1_Aggresive:
             text "{size=*.8}{color=#000}In der Forschung gilt die Rede vom Siegesplatz als der Wendepunkt, an dem der Weg in diesen Krieg eingeschlagen wurde. Noch heute, Jahrzehnte später, ist das Land gespalten."
             text "{size=*.8}{color=#000}Immer wieder aufkeimende Konflikte, Gewalt und Misstrauen definieren Politik und Gesellschaft."
 
+    frame:
+        xanchor .5
+        yanchor .5
+        xsize 600
+        ysize 120
+        xpos 650
+        ypos 150
+        hbox:
+            xalign .5
+            yalign .5
+            text "{size=*1.8}{color=#f1f0be}Aggressiv"
+
+
     button:
         xpos 500
         ypos 1300
@@ -54,6 +67,18 @@ screen Ending_1o2_Fiesty:
             text "{size=*0.87}{color=#000}Es behauptete sich gegen extremistische Kräfte im In- und Ausland. Ob dieser Zusammenhalt trotz der Ausgrenzung gelang oder wegen ihr, darüber streitet die Forschung bis heute."
             text "{size=*0.87}{color=#000}Die Rede vom Siegesplatz gilt als Ausgangspunkt für diesen kämpferischen Weg, der jedoch gesellschaftlich umstritten ist."
 
+    frame:
+        xanchor .5
+        yanchor .5
+        xsize 600
+        ysize 120
+        xpos 650
+        ypos 150
+        hbox:
+            xalign .5
+            yalign .5
+            text "{size=*1.8}{color=#f1f0be}Kämpferisch"
+
     button:
         xpos 500
         ypos 1300
@@ -87,6 +112,18 @@ screen Ending_1o3_Diplomatic:
             text "{size=*0.9}{color=#000}Er hielt das Land aber auch zusammen. Aus oppositionellen Kreisen wurde der Präsidentin nach ihrer Rede immer wieder Schwäche vorgehalten."
             text "{size=*0.9}{color=#000}Diese Gruppe blieb in der Minderheit – bestimmte aber lautstark die Debatten."
             text "{size=*0.9}{color=#000}Die Rede vom Siegesplatz gilt als Ausgangspunkt für den zähen, manchmal lähmenden, aber letztlich tragfähigen Weg, den das Land nach dem Anschlag ging."
+
+    frame:
+        xanchor .5
+        yanchor .5
+        xsize 700
+        ysize 120
+        xpos 650
+        ypos 150
+        hbox:
+            xalign .5
+            yalign .5
+            text "{size=*1.8}{color=#f1f0be}Beschwichtigend"
 
     button:
         xpos 500
@@ -123,6 +160,18 @@ screen Ending_1o4_Calming:
             text "{size=*0.8}{color=#000}Die fehlenden Konsequenzen nach dem ersten Anschlag hatten einen Preis: Zwei weitere Attentate erschütterten das Land keine fünf Jahre später."
             text "{size=*0.8}{color=#000}Das Land rutschte in eine Phase der Unruhen und Ausschreitungen ab, aus der es bis heute nicht herausgefunden hat. Immer wieder aufflammende Bürgerkriege prägen Alltag und Politik."
             text "{size=*0.8}{color=#000}Dass in der Rede auf dem Siegesplatz kein klarer Pfad eingeschlagen wurde, gilt unter Historikern heute als Ausgangspunkt für den Niedergang."
+
+    frame:
+        xanchor .5
+        yanchor .5
+        xsize 600
+        ysize 120
+        xpos 650
+        ypos 150
+        hbox:
+            xalign .5
+            yalign .5
+            text "{size=*1.8}{color=#f1f0be}Versöhnend"
 
     button:
         xpos 500

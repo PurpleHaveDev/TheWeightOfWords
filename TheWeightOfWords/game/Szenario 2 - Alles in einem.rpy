@@ -940,6 +940,18 @@ screen Ending_2o1_Aggresive:
             text "{size=*.8}{color=#000}an dem der Weg in diese wirtschaftliche Isolation eingeschlagen wurde. Noch heute, Jahrzehnte später, ist das Land wirtschaftlich abgeschottet."
             text "{size=*.8}{color=#000}Immer wiederkehrende Handelskonflikte und Versorgungskrisen definieren Politik und Alltag."
 
+    frame:
+        xanchor .5
+        yanchor .5
+        xsize 600
+        ysize 120
+        xpos 650
+        ypos 150
+        hbox:
+            xalign .5
+            yalign .5
+            text "{size=*1.8}{color=#f1f0be}Aggressiv"            
+
     button:
         xpos 500
         ypos 1300
@@ -975,6 +987,18 @@ screen Ending_2o2_Fiesty:
             text "{size=*0.87}{color=#000}Die Schuld dafür suchten Opposition und Unzufriedene wahlweise in Ausländern, Minderheiten oder dem System an sich."
             text "{size=*0.87}{color=#000}Trotzdem erholte sich das Land nach einigen Jahren von der Nordbank-Krise, die Rede der Präsidentin hatte den Grundstein gelegt."
 
+    frame:
+        xanchor .5
+        yanchor .5
+        xsize 600
+        ysize 120
+        xpos 650
+        ypos 150
+        hbox:
+            xalign .5
+            yalign .5
+            text "{size=*1.8}{color=#f1f0be}Kämpferisch"
+
     button:
         xpos 500
         ypos 1300
@@ -1007,6 +1031,18 @@ screen Ending_2o3_Diplomatic:
             text "{size=*0.9}{color=#000}Es wurde über neue Regeln debattiert und schließlich wurden Markt und Wirtschaft mit rigorosen Auflagen belegt. Das führte zu weniger Wachstum, aber auch zu weniger Missbrauch."
             text "{size=*0.9}{color=#000}Nach der Krise fühlten sich viele Menschen in diesem harten Kurs bestätigt. Doch der Weg blieb aufgrund der Einschränkungen wirtschaftlich steinig und es kam immer wieder zu Verteilungsproblemen."
             text "{size=*0.9}{color=#000}Dennoch erholte sich das Land von der Krise und die Rede der Präsidentin wurde als Grundstein für diesen Weg angesehen."
+
+    frame:
+        xanchor .5
+        yanchor .5
+        xsize 700
+        ysize 120
+        xpos 650
+        ypos 150
+        hbox:
+            xalign .5
+            yalign .5
+            text "{size=*1.8}{color=#f1f0be}Beschwichtigend"
 
     button:
         xpos 500
@@ -1043,6 +1079,18 @@ screen Ending_2o4_Calming:
             text "{size=*0.8}{color=#000}von der sich das Land bis heute nicht erholt hat. Immer wieder kommt es zu Umstürzen im politischen System,"
             text "{size=*0.8}{color=#000}und die extrempolitischen Ränder sind gerade bei den jungen Menschen, die von der Krise gebeutelt wurden, sehr beliebt."
             text "{size=*0.8}{color=#000}Die Rede der Präsidentin gilt als Ausgangspunkt für dieses Versagen."
+
+    frame:
+        xanchor .5
+        yanchor .5
+        xsize 600
+        ysize 120
+        xpos 650
+        ypos 150
+        hbox:
+            xalign .5
+            yalign .5
+            text "{size=*1.8}{color=#f1f0be}Versöhnend"
 
     button:
         xpos 500

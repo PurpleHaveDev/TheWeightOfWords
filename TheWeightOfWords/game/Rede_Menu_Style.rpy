@@ -9,24 +9,24 @@ screen Sp1_Rede_Menu_Style:
         add "UI/Speech_bg.png":
             xsize 2560
             ysize 1440
-
-    frame:
-        xpos 700
-        ypos 10
-        text "[which_decision]"
-
-    frame:
-        xpos 800
-        ypos 10 
-        vbox:
-            text"[Decisions]"
-
-    frame:
-        xpos 600
-        ypos 10
-        vbox:
-            text"[Aggression]"
-    
+#
+#    frame:
+#        xpos 700
+#        ypos 10
+#        text "[which_decision]"
+#
+#    frame:
+#        xpos 800
+#        ypos 10 
+#        vbox:
+#            text"[Decisions]"
+#
+#    frame:
+#        xpos 600
+#        ypos 10
+#        vbox:
+#            text"[Aggression]"
+#    
     frame:
         background None
         xpos 1730
