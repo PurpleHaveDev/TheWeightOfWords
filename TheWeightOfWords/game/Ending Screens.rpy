@@ -29,7 +29,7 @@ screen Ending_1o1_Aggresive:
                 text "{color=#f1f0be}Weiter >>>"
         action(
             SetVariable ("Page",1),
-            Jump ("Erklärung")
+            Jump ("Sp1_Erklärung")
         )
 
 
@@ -64,7 +64,7 @@ screen Ending_1o2_Fiesty:
                 text "{color=#f1f0be}Weiter >>>"
         action(
             SetVariable ("Page",1),
-            Jump ("Erklärung")
+            Jump ("Sp1_Erklärung")
         )
 
 
@@ -98,7 +98,7 @@ screen Ending_1o3_Diplomatic:
                 text "{color=#f1f0be}Weiter >>>"
         action(
             SetVariable ("Page",1),
-            Jump ("Erklärung")
+            Jump ("Sp1_Erklärung")
         )
 
 
@@ -134,5 +134,5 @@ screen Ending_1o4_Calming:
                 text "{color=#f1f0be}Weiter >>>"
         action(
             SetVariable ("Page",1),
-            Jump ("Erklärung")
+            Jump ("Sp1_Erklärung")
         )

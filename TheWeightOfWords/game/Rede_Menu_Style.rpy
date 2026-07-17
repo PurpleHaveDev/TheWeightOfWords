@@ -1,6 +1,6 @@
-screen Rede_Menu_Style:
+screen Sp1_Rede_Menu_Style:
 
-    style_prefix "Decision_UI"
+    style_prefix "Decision_UI1"
 
     frame:
         background None
@@ -14,31 +14,31 @@ screen Rede_Menu_Style:
         xpos 700
         ypos 10
         text "[which_decision]"
-#
-#    frame:
-#        xpos 800
-#        ypos 10 
-#        vbox:
-#            text"[Decisions]"
-#
-#    frame:
-#        xpos 600
-#        ypos 10
-#        vbox:
-#            text"[Aggression]"
-#    
+
+    frame:
+        xpos 800
+        ypos 10 
+        vbox:
+            text"[Decisions]"
+
+    frame:
+        xpos 600
+        ypos 10
+        vbox:
+            text"[Aggression]"
+    
     frame:
         background None
         xpos 1730
         ypos 100
         vbox:
             xsize 700
-            text"[Speech[0]]"
-            text"[Speech[1]]"
-            text"[Speech[2]]"
-            text"[Speech[3]]"
-            text"[Speech[4]]"
-            text"[Speech[5]]"
+            text"[Speech1[0]]"
+            text"[Speech1[1]]"
+            text"[Speech1[2]]"
+            text"[Speech1[3]]"
+            text"[Speech1[4]]"
+            text"[Speech1[5]]"
 
 
 
@@ -55,24 +55,6 @@ screen Rede_Menu_Style:
 
     if which_decision>=7:
         pass
-    #    button:
-    #        add Solid("#000")
-    #        xsize 600
-    #        ysize 100
-    #        xpos 800
-    #        ypos 1250
-    #        xanchor .5
-    #        hbox:
-    #            text "Nachfolgen"
-    #            xalign .5
-    #            yalign .5
-#
-    #        action[
-    #            Jump("Decision_stage_"+str(which_decision))
-    #            ]
-
-
-
 
 ###########################################################################################
 
@@ -88,8 +70,8 @@ screen Rede_Menu_Style:
                 action[
                     Function(Decisions.__setitem__,which_decision - 1, 2),
                     SetVariable("Aggression", Aggression+2),
-                    SetVariable("Which_decision", which_decision+1),
-                    Jump("Decision_stage_"+str(which_decision))
+                    SetVariable("which_decision", which_decision+1),
+                    Jump("Sp1_Decision_stage_"+str(which_decision))
                 ]
             
 
@@ -158,8 +140,8 @@ screen Rede_Menu_Style:
                 action[
                     Function(Decisions.__setitem__,which_decision - 1, 1),
                     SetVariable("Aggression", Aggression+1),
-                    SetVariable("Which_decision", which_decision+1),
-                    Jump("Decision_stage_"+str(which_decision))
+                    SetVariable("which_decision", which_decision+1),
+                    Jump("Sp1_Decision_stage_"+str(which_decision))
                 ]
             frame:
                 background None
@@ -227,8 +209,8 @@ screen Rede_Menu_Style:
                 action[
                     Function(Decisions.__setitem__,which_decision - 1, 3),
                     SetVariable("Aggression", Aggression-1),
-                    SetVariable("Which_decision", which_decision+1),
-                    Jump("Decision_stage_"+str(which_decision))
+                    SetVariable("which_decision", which_decision+1),
+                    Jump("Sp1_Decision_stage_"+str(which_decision))
                 ]
             frame:
                 background None
@@ -294,8 +276,8 @@ screen Rede_Menu_Style:
                 action[
                     Function(Decisions.__setitem__,which_decision - 1, 4),
                     SetVariable("Aggression", Aggression-2),
-                    SetVariable("Which_decision", which_decision+1),
-                    Jump("Decision_stage_"+str(which_decision))
+                    SetVariable("which_decision", which_decision+1),
+                    Jump("Sp1_Decision_stage_"+str(which_decision))
                 ]
             frame:
                 background None
@@ -405,7 +387,7 @@ screen Rede_Menu_Style:
                 xalign .5
                 yalign .5
             action[
-                Jump("Decision_stage_"+str(which_decision))
+                Jump("Sp1_Decision_stage_"+str(which_decision))
                 ]
 
 
@@ -419,11 +401,11 @@ style Decision_UI_text:
 
 ########################################################################################################
 
-label Audience_Reaction:
-    call screen Publikum
+label Sp1_Audience_Reaction:
+    call screen Sp1_Publikum
 
 
-screen Publikum:
+screen Sp1_Publikum:
     style_prefix "Audience"
 
 
@@ -441,12 +423,12 @@ screen Publikum:
         ypos 100
         vbox:
             xsize 700
-            text"{color=#181817}{size=*0.48}[Speech[0]]"
-            text"{color=#181817}{size=*0.48}[Speech[1]]"
-            text"{color=#181817}{size=*0.48}[Speech[2]]"
-            text"{color=#181817}{size=*0.48}[Speech[3]]"
-            text"{color=#181817}{size=*0.48}[Speech[4]]"
-            text"{color=#181817}{size=*0.48}[Speech[5]]"
+            text"[Speech1[0]]"
+            text"[Speech1[1]]"
+            text"[Speech1[2]]"
+            text"[Speech1[3]]"
+            text"[Speech1[4]]"
+            text"[Speech1[5]]"
 
     frame:
         background None
@@ -476,7 +458,7 @@ screen Publikum:
                 text "{color=#f1f0be}Weiter >>>"
         action(
             SetVariable ("Page",1),
-            Jump ("Decision")
+            Jump ("Sp1_Decision")
         )
         
     if which_decision==2:

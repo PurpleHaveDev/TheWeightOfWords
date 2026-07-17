@@ -1,8 +1,8 @@
-label Erklärung:
-    call screen ErklärungScreen
+label Sp1_Erklärung:
+    call screen Sp1_ErklärungScreen
 
-screen ErklärungScreen: 
-    style_prefix "Diagramm"
+screen Sp1_ErklärungScreen: 
+    style_prefix "Sp1_Diagramm"
 
     frame:
         background None
@@ -22,7 +22,7 @@ screen ErklärungScreen:
             focus_mask True
             action[
                 SetVariable ("Page",2),
-                Jump ("Erklärung")
+                Jump ("Sp1_Erklärung")
             ]
         
         button:
@@ -34,6 +34,7 @@ screen ErklärungScreen:
                 vbox:
                     text "{color=#f1f0be}Home"
             action(
+                SetVariable("Speech1", ["","","","","",""]),
                 SetVariable("Auswirkung", ["","","","","",""]),
                 Jump ("start")
             )
@@ -44,22 +45,22 @@ screen ErklärungScreen:
             xpos 300
             ypos 200
             xsize 500
-            text Speech[0]:
-                size 30
+            text Speech1[0]:
+                #size 30
                 color "#000"             
         vbox:
             xpos 1050
             ypos 200
             xsize 500
-            text Speech[1]:
-                size 30
+            text Speech1[1]:
+                #size 30
                 color "#000"
         vbox:
             xpos 1790
             ypos 200
             xsize 500
-            text Speech[2]:
-                size 30
+            text Speech1[2]:
+                #size 30
                 color "#000"
 
 
@@ -103,22 +104,22 @@ screen ErklärungScreen:
             xpos 300
             ypos 200
             xsize 500
-            text Speech[3]:
-                size 30
+            text Speech1[3]:
+                #size 30
                 color "#000"             
         vbox:
             xpos 1050
             ypos 200
             xsize 500
-            text Speech[4]:
-                size 30
+            text Speech1[4]:
+                #size 30
                 color "#000"
         vbox:
             xpos 1790
             ypos 200
             xsize 500
-            text Speech[5]:
-                size 30
+            text Speech1[5]:
+                #size 30
                 color "#000"
 
 
@@ -153,6 +154,7 @@ screen ErklärungScreen:
                 vbox:
                     text "{color=#f1f0be}Home"
             action(
+                SetVariable("Speech1", ["","","","","",""]),
                 SetVariable("Auswirkung", ["","","","","",""]),
                 Jump ("start")
             )

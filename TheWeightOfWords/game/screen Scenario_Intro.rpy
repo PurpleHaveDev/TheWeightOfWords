@@ -1,5 +1,5 @@
 screen Scenario1_Intro:
-    style_prefix "Intro_UI"
+    style_prefix "Sp1_Intro_UI"
 
     frame:
         background None
@@ -25,7 +25,7 @@ screen Scenario1_Intro:
         at Transform(zoom=1.32)
         focus_mask True
         action[
-            Jump ("Newspaper")
+            Jump ("Sp1_Newspaper")
         ]
 
     imagebutton:
@@ -36,7 +36,7 @@ screen Scenario1_Intro:
         at Transform(zoom=1.32)
         focus_mask True
         action[
-            Jump ("Geheimakte")
+            Jump ("Sp1_Geheimakte")
         ]
  
     imagebutton:
@@ -47,7 +47,7 @@ screen Scenario1_Intro:
         at Transform(zoom=1.32)
         focus_mask True
         action[
-            Jump ("Smartphone")
+            Jump ("Sp1_Smartphone")
         ]
  
 
@@ -63,15 +63,15 @@ screen Scenario1_Intro:
                 text "{color=#f1f0be}Auf zur Rede"
         action(
             SetVariable ("BriefingErfolgt", False),
-            Jump ("Tutorial")
+            Jump ("Sp1_Tutorial")
         )
 
 #77777777777777777777777777777777777777777777777777777777777777777777777777777777777
  
-label Geheimakte:
-    call screen Classified_Data
+label Sp1_Geheimakte:
+    call screen Sp1_Classified_Data
 
-screen Classified_Data:
+screen Sp1_Classified_Data:
     style_prefix "Geheimakte_öffnen"
 
     frame:
@@ -100,10 +100,10 @@ screen Classified_Data:
 
 #/////////////////////////////////////////////////////////////////////////////////////////
 
-label Smartphone:
-    call screen Sc_Smartphone
+label Sp1_Smartphone:
+    call screen Sp1_Sc_Smartphone
 
-screen Sc_Smartphone:
+screen Sp1_Sc_Smartphone:
     style_prefix "Social_Media_lesen"
 
     frame:
@@ -131,10 +131,10 @@ screen Sc_Smartphone:
 
 #///////////////////////////////////////////////////////////////////////////////
 
-label Newspaper:
-    call screen Sc_Newspaper
+label Sp1_Newspaper:
+    call screen Sp1_Sc_Newspaper
 
-screen Sc_Newspaper:
+screen Sp1_Sc_Newspaper:
     style_prefix "Zeitung_lesen"
 
     frame:
@@ -172,9 +172,10 @@ screen Sc_Newspaper:
         vbox:
             yalign .5
             xalign .5
-            text " ^ "
+            text "^"
         action[
-            SetVariable ("Zeitungshöhe",Zeitungshöhe+100)
+            SetVariable ("Zeitungshöhe",Zeitungshöhe+100),
+            Jump("Sp1_Newspaper")
         ] 
 
     button:
@@ -188,8 +189,9 @@ screen Sc_Newspaper:
         vbox:
             yalign .5
             xalign .5
-            text "V"
+            text "v"
         action[
-            SetVariable ("Zeitungshöhe",Zeitungshöhe-100)
+            SetVariable ("Zeitungshöhe",Zeitungshöhe-100),
+            Jump("Sp1_Newspaper")
         ] 
 

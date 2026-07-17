@@ -78,7 +78,7 @@ screen Szenarios:
             SetVariable("Szenario",2),
             SetVariable("Aggression",0),
             SetVariable("Decisions",[0,0,0,0,0,0]),
-            NullAction()
+            Jump ("Szenario2")
         ]
     frame:
         background None
@@ -101,8 +101,3 @@ screen Szenarios:
             NullAction()
         ]
 
-
-$Szenario = 1
-$Aggression = 0
-$Decisions= [0,0,0,0,0,0]
-jump Szenario1
