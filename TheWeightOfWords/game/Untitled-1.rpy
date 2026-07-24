@@ -36,7 +36,7 @@ screen mainmenu:
         hover "UI/Btn_Entwickler_hover.png"
         focus_mask True
         action[
-            NullAction()
+            Jump ("Credits")
         ]
 
 screen Szenarios:
@@ -100,4 +100,57 @@ screen Szenarios:
             SetVariable("Decisions",[0,0,0,0,0,0]),
             NullAction()
         ]
+    frame:
+        background None
+        vbox:
+            xpos 1750
+            ypos 150
+            xsize 600
+            text "{color=#000}Szenario 3: Bald verfügbar"
 
+
+label Credits:
+    call screen CreditsDE
+
+screen CreditsDE:
+    style_prefix "CreditsDE"
+    
+    frame:
+        background None
+        xalign 0.5
+        yalign 0.5               
+        add "UI/Table_bg.png":
+            xsize 2560
+            ysize 1440
+
+    frame:
+        xsize 800
+        ysize 1100
+        xalign .5
+        yalign .5
+        vbox:
+            xalign .5
+            yalign .5
+            text "{size=*2}{color=#F2AE29}    Das Narrativ"
+            text ""
+            text"{size=*1.5}{color=#DEDDAF}              Idee:"
+            text"{size=*1.8}{color=#f1f0be}      Nora Varga"
+            text""
+            text"{size=*1.5}{color=#DEDDAF}            Writing:"
+            text"{size=*1.8}{color=#f1f0be}      Nora Varga" 
+            text""
+            text"{size=*1.5}{color=#DEDDAF} Graphiken und 2D Art:"
+            text"{size=*1.8}{color=#f1f0be}     Miriam Löffler"
+            text""
+            text"{size=*1.5}{color=#DEDDAF}    Programmierung:"
+            text"{size=*1.8}{color=#f1f0be}      Philipp Lüer"
+                  
+    button:
+        xpos 100
+        ypos 1200
+        frame:
+            xalign 0.5
+            yalign 0.5
+            vbox:
+                text "<<< zurück"
+        action Jump ("start")
