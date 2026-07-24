@@ -1020,7 +1020,7 @@ screen Ending_2o3_Diplomatic:
         background None
         xalign 0.5
         yalign 0.5
-        add "UI/End_Beschwichtigend.png":
+        add "UI/End_Versoehnend.png":
             xsize 2560
             ysize 1440
         vbox:
@@ -1035,14 +1035,14 @@ screen Ending_2o3_Diplomatic:
     frame:
         xanchor .5
         yanchor .5
-        xsize 700
+        xsize 600
         ysize 120
         xpos 650
         ypos 150
         hbox:
             xalign .5
             yalign .5
-            text "{size=*1.8}{color=#f1f0be}Beschwichtigend"
+            text "{size=*1.8}{color=#f1f0be}Versöhnend"
 
     button:
         xpos 500
@@ -1066,7 +1066,7 @@ screen Ending_2o4_Calming:
         background None
         xalign 0.5
         yalign 0.5
-        add "UI/End_Versoehnend.png":
+        add "UI/End_Beschwichtigend.png":
             xsize 2560
             ysize 1440
         vbox:
@@ -1083,14 +1083,14 @@ screen Ending_2o4_Calming:
     frame:
         xanchor .5
         yanchor .5
-        xsize 600
+        xsize 700
         ysize 120
         xpos 650
         ypos 150
         hbox:
             xalign .5
             yalign .5
-            text "{size=*1.8}{color=#f1f0be}Versöhnend"
+            text "{size=*1.8}{color=#f1f0be}Beschwichtigend"
 
     button:
         xpos 500
